@@ -1,0 +1,70 @@
+/* import theme from "" */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto asegura que el tamaño total de un elemento incluya el padding y border, sin aumentar su tamaño */
+}
+
+.login-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    height: 932px;
+}
+
+form label {
+    display: block;
+}
+
+.title-div{
+    width: 250px;
+}
+
+.shop-title{
+    color: #183A1D;
+    text-align: center;
+}
+
+.none{
+    display: none;
+}
+
+.login-btn{
+    background-color: #F0A04B;
+    color: #FFFFFF;
+    width: 15rem;
+    margin-top: 2rem;
+    align-items: center;
+    transition-duration: 0.4s;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* .login-btn:hover{
+    background-color: #183A1D;
+} */
+
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    /* margin-left:2rem; */
+    margin-top: 1rem;
+}
+
+.form-label{
+    font-size: 12px;
+}
+
+.form-input{
+    background-color: #EBEBEB;
+    border-radius: 6px;
+    border:none;
+    height: 2rem;
+    width: 12rem;
+}

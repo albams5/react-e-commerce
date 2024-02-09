@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Kevin Malone",
+      "Collection": "Serenity",
+      "Rating": 4.8,
+      "Price ": 75.99,
+      "Id": 1,
+      "Image": "example Image here with string type"
+    },
+    {
+      "name": "Dwight Schrute",
+      "Collection": "Serenity",
+      "Rating": 4.7,
+      "Price ": 89.99,
+      "Id": 2,
+      "Image": "example Image here with string type"
+    },
+    {
+      "name": "Andrew Bernardt",
+      "Collection": "Spring 24",
+      "Rating": 4.9,
+      "Price ": 64.99,
+      "Id": 3,
+      "Image": "example Image here with string type"
+    },
+    {
+      "name": "Jim Halpert",
+      "Collection": "Spring 24",
+      "Rating": 4.8,
+      "Price ": 75.99,
+      "Id": 4,
+      "Image": "example Image here with string type"
+    },
+    {
+      "name": "Michael Scott",
+      "Collection": "Aqua",
+      "Rating": 4.7,
+      "Price ": 54.99,
+      "Id": 5,
+      "Image": "example Image here with string type"
+    },
+    {
+      "name": "Pam Beasly",
+      "Collection": "Aqua",
+      "Rating": 4.9,
+      "Price ": 119.99,
+      "Id": 6,
+      "Image": "example Image here with string type"
+    }
+  ]
