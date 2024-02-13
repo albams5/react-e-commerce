@@ -8,23 +8,29 @@
 .login-container{
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 430px;
-    height: 932px;
+    /* height: 932px; */
 }
 
 form label {
     display: block;
 }
 
-.title-div{
+/* .title-div{
     width: 250px;
-}
+} */
 
 .shop-title{
     color: #183A1D;
     text-align: center;
+}
+
+.incorrect-user, .incorrect-password{
+    color: red;
+    height: 2rem;
+    position: absolute;
 }
 
 .none{
@@ -53,12 +59,15 @@ form label {
 .login-form{
     display: flex;
     flex-direction: column;
-    /* margin-left:2rem; */
-    margin-top: 1rem;
+    align-items: center;
+    margin-top: 3rem;
 }
 
 .form-label{
     font-size: 12px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-input{
@@ -67,4 +76,14 @@ form label {
     border:none;
     height: 2rem;
     width: 12rem;
+    position: relative;
+}
+
+input:focus{
+    background-color: rgb(240, 195, 147);
+}
+
+.login-chair{
+    height: 95%;
+    width: 95%;
 }
