@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import './login.css';
-import sillon from "../../assets/green-chair-login.png";
-import users from "../../data/users.json"
+import sillon from "../../assets/images/green-chair-login.png"
+// import { Navigate, Link } from 'react-router-dom';
 
 
 type Props = {}
@@ -12,11 +12,13 @@ const Login = (props: Props) => {
   const [password, setPassword] = useState("");
 
   useEffect(() => {
+  
     const inputsValidation = () => {
-      const user = users.find(user => user.name === name && user.Password === password);
-      const correctUser = users.find(user => user.name === name && user.Password !== password);
-      const correctPassword = users.find(user => user.name !== name && user.Password === password);
-      const incorrectInfo = users.find(user => name && user.name !== name && password && user.Password !== password)
+
+      const user = data.find(user => user.name === name && user.Password === password);
+      const correctUser = data.find(user => user.name === name && user.Password !== password);
+      const correctPassword = data.find(user => user.name !== name && user.Password === password);
+      const incorrectInfo = data.find(user => name && user.name !== name && password && user.Password !== password)
       
       const errorPassword = document.getElementById("error-password");
       const errorUsername = document.getElementById("error-username");
@@ -25,6 +27,9 @@ const Login = (props: Props) => {
         errorPassword?.classList.add("none");
         errorUsername?.classList.add("none");
         alert("Correct login");
+        console.log(user);
+       
+
       } else if (correctUser) {
         alert("Incorrect password");
         errorUsername?.classList.add("none");
@@ -39,7 +44,7 @@ const Login = (props: Props) => {
       }
     };
 
-    inputsValidation();
+    inputsValidation(data);
   }, [name, password]);
 
   const inputName = useRef(null);
@@ -54,7 +59,7 @@ const Login = (props: Props) => {
           <img src={sillon} alt="Green Chair Login" className='login-chair'/>
           <h2 className ="shop-title">Creative Concept Design</h2>
         </div>
-        <form className="login-form" onSubmit={ev => {ev.preventDefault(); setName(ev.target.username.value); setPassword(ev.target.password.value); console.log(ev.target.username.value + ev.target.password.value); console.log(name); console.log(password);}}>
+        <form className="login-form" onSubmit={ev => {ev.preventDefault(); setName(ev.target.username.value); setPassword(ev.target.password.value)}}>
             <label htmlFor="username" className="form-label">Username:
             <input type="text" className="form-input" id="username" name="username" ref={inputName} />
             <small id="error-username" className ="incorrect-user none">Please enter a correct username</small></label>

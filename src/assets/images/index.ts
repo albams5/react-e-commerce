@@ -1,0 +1,1 @@
+import green-chair-login from './green-chair-login.png'

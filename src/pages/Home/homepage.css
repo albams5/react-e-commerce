@@ -1,0 +1,148 @@
+body {
+    background-color: #183A1D;
+}
+
+.main-container{
+    position: relative;
+}
+
+.home-body{
+    width: 430px;
+    height: 800px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #ffffff;
+}
+.home-header{
+    width: 430px;
+    height: 170px;
+    background-color: #E1EEDD;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto
+}
+
+.bubble{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: black;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.bubble-icon{
+    width: 70%;
+    height: 70%
+}
+
+.right{
+    justify-self: end;
+}
+
+.welcome-span{
+    margin-top: -30px;
+    margin-right: -205px;
+}
+
+.explorer{
+    background-color: #ffffff;
+    border-radius: 6px;
+    border:none;
+    height: 2rem;
+    width: 12rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper {
+    position: relative;
+    width: 271px;
+    top: 60%;
+    right: 15%
+  }
+  
+  .input {
+    box-sizing: border-box;
+    color: #191919;
+    padding: 15px 15px 15px 35px;
+    width: 100%;
+  }
+
+  .input-icon {
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-100%);
+  }
+
+  .strong-client-name{
+    font-size:x-large
+  }
+
+  .sale-img{
+    height: 137px;
+    width: 333px;
+    border-radius: 30px;
+    margin-top: 230px;
+    object-fit:cover;
+    object-position:center;
+    opacity: 0.6;
+  }
+
+  .banner{
+    position: relative
+  }
+
+  .sale-banner-info{
+    position: absolute;
+    top: 65%;
+    right: 15%
+  } 
+
+  .collection-sale{
+    color: #F0A04B;
+    font-weight: bold;
+    font-size:small;
+    margin-bottom: 0
+  }
+
+  .sale-percentaje{
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0
+  }
+
+  .btn-sale{
+    background-color: #F0A04B;
+    color: #FFFFFF;
+    width: 6rem;
+    align-items: center;
+    transition-duration: 0.4s;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .products-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
