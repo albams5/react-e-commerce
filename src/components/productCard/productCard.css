@@ -15,14 +15,14 @@
     right: 45px;
     background-color: white;
     border-radius: 50%;
-    height: 10%;
+    height: 13%;
     width: 10%;
 }
 
 .product-like{
-    height: 70%;
+    height: 65%;
     width: 70%;
-    padding-bottom: 5px
+    margin-bottom: 1px
 }
 
 .addtocart-container{

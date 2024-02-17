@@ -39,9 +39,6 @@ import ProductCard from '../../components/productCard';
                 </div>
                 <div className="products-container">
                     <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
 
                 </div>
             </div>

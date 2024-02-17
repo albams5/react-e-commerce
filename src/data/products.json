@@ -1,50 +1,60 @@
 [
     {
-      "name": "Kevin Malone",
-      "Collection": "Serenity",
+      "name": "Mairo Armchair",
+      "Collection": "Serenity Collection",
       "Rating": 4.8,
-      "Price ": 75.99,
+      "Price": 75.99,
       "Id": 1,
-      "Image": "example Image here with string type"
+      "Image": "example Image here with string type",
+      "Colors": ["Dark Green", "Light Beige"]
     },
     {
-      "name": "Dwight Schrute",
-      "Collection": "Serenity",
+      "name": "Ana Armchair",
+      "Collection": "Serenity Collection",
       "Rating": 4.7,
-      "Price ": 89.99,
+      "Price": 89.99,
       "Id": 2,
-      "Image": "example Image here with string type"
+      "Image": "example Image here with string type",
+      "Colors": ["Dark Green", "Black"]
     },
     {
-      "name": "Andrew Bernardt",
+      "name": "Robine Armchair",
       "Collection": "Spring 24",
       "Rating": 4.9,
-      "Price ": 64.99,
+      "Price": 64.99,
       "Id": 3,
-      "Image": "example Image here with string type"
+      "Image": "example Image here with string type",
+      "Colors": ["Light Beige"]
+
     },
     {
-      "name": "Jim Halpert",
+      "name": "Julie Chair",
       "Collection": "Spring 24",
       "Rating": 4.8,
-      "Price ": 75.99,
+      "Price": 75.99,
       "Id": 4,
-      "Image": "example Image here with string type"
+      "Image": "example Image here with string type",
+      "Colors": ["Dark Green", "Light Beige"]
+
     },
     {
-      "name": "Michael Scott",
+      "name": "Nemo Chair",
       "Collection": "Aqua",
       "Rating": 4.7,
-      "Price ": 54.99,
+      "Price": 54.99,
       "Id": 5,
-      "Image": "example Image here with string type"
+      "Image": "example Image here with string type",
+      "Colors": ["Light Beige"]
+
     },
     {
-      "name": "Pam Beasly",
+      "name": "Luisa Chair",
       "Collection": "Aqua",
       "Rating": 4.9,
-      "Price ": 119.99,
+      "Price": 119.99,
       "Id": 6,
-      "Image": "example Image here with string type"
+      "Image": "example Image here with string type",
+      "Colors": ["Dark Green", "Light Beige", "Black", "Brown", "White"]
+
     }
   ]

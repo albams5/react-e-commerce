@@ -11,9 +11,9 @@ export const AppRoutes = (props: Props) => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route index element={<Login />}/> */}
+        <Route index element={<Login />}/>
         <Route path="/homepage" element={<Home />} />
-        <Route path="/productpage" element={<ProductPage />} />
+        <Route path="/productpage/:productId" element={<ProductPage />} />
         <Route path="/wishlist" />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/*" element="This page doesn't exist :("/>
