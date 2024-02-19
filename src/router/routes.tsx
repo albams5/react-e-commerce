@@ -3,7 +3,6 @@ import { Home } from "../pages/Home";
 import { ShoppingCart } from "../pages/ShoppingCart";
 import { ProductPage } from "../pages/ProductPage";
 import Login from "../pages/Login";
-import { Navigation } from "../components/layout/Navbar";
 
 type Props = {}
 
@@ -18,7 +17,6 @@ export const AppRoutes = (props: Props) => {
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/*" element="This page doesn't exist :("/>
       </Routes>
-      {/* <Navigation/> */}
     </BrowserRouter>
   )
 }

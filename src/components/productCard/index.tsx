@@ -28,21 +28,21 @@ const ProductCard = (props: Props) => {
   return (
     <>
       {productData.map(product=>
-      <Link to={`/productpage/${product.Id}`}>
         <div key={product.Id}>
+          <Link to={`/productpage/${product.Id.toString()}`}>
             <div className="container-product-img">
-                <img className="product-img" src={sillaMadera} />
+                <img className="product-img" src={product.Image} />
                 <div className="container-like">
                     <img className="product-like" src={like}/>
                 </div>
             </div>
+          </Link>  
             <div className="addtocart-container">
-                <p>{product.name}</p>
+                <p className="product-name">{product.name}</p>
                 <img className="addtocart-icon" src={add} />
             </div>
-            <p>{"$" + product.Price}</p>
+            <p className="product-price">{"$" + product.Price}</p>
         </div>
-      </Link>  
         )}
     </>
   )

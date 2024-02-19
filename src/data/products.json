@@ -4,8 +4,8 @@
       "Collection": "Serenity Collection",
       "Rating": 4.8,
       "Price": 75.99,
-      "Id": 1,
-      "Image": "example Image here with string type",
+      "Id": "1",
+      "Image": "src/assets/images/sillon-mairo.jpg",
       "Colors": ["Dark Green", "Light Beige"]
     },
     {
@@ -13,47 +13,47 @@
       "Collection": "Serenity Collection",
       "Rating": 4.7,
       "Price": 89.99,
-      "Id": 2,
-      "Image": "example Image here with string type",
+      "Id": "2",
+      "Image": "src/assets/images/ana-armchair.jpg",
       "Colors": ["Dark Green", "Black"]
     },
     {
       "name": "Robine Armchair",
-      "Collection": "Spring 24",
+      "Collection": "Spring 24 Collection",
       "Rating": 4.9,
       "Price": 64.99,
-      "Id": 3,
-      "Image": "example Image here with string type",
-      "Colors": ["Light Beige"]
+      "Id": "3",
+      "Image": "src/assets/images/fiji-armchair.jpg",
+      "Colors": ["Grey"]
 
     },
     {
       "name": "Julie Chair",
-      "Collection": "Spring 24",
+      "Collection": "Spring 24 Collection",
       "Rating": 4.8,
       "Price": 75.99,
-      "Id": 4,
-      "Image": "example Image here with string type",
+      "Id": "4",
+      "Image": "src/assets/images/silla-verde.jpg",
       "Colors": ["Dark Green", "Light Beige"]
 
     },
     {
       "name": "Nemo Chair",
-      "Collection": "Aqua",
+      "Collection": "Aqua Collection",
       "Rating": 4.7,
       "Price": 54.99,
-      "Id": 5,
-      "Image": "example Image here with string type",
+      "Id": "5",
+      "Image": "src/assets/images/silla-patas-doradas.jpg",
       "Colors": ["Light Beige"]
 
     },
     {
       "name": "Luisa Chair",
-      "Collection": "Aqua",
+      "Collection": "Aqua Collection",
       "Rating": 4.9,
       "Price": 119.99,
-      "Id": 6,
-      "Image": "example Image here with string type",
+      "Id": "6",
+      "Image": "src/assets/images/silla-madera.jpg",
       "Colors": ["Dark Green", "Light Beige", "Black", "Brown", "White"]
 
     }

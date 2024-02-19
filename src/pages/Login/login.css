@@ -28,7 +28,7 @@ form label {
     text-align: center;
 }
 
-.incorrect-user, .incorrect-password{
+.error-message{
     color: red;
     height: 2rem;
     position: absolute;

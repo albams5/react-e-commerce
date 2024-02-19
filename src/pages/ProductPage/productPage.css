@@ -1,0 +1,11 @@
+.container-product-page{
+    height: 800px;
+    width: 430px;
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+}
+
+.rating-img{
+    width: 2.5%;
+    height: 1.5%
+}
