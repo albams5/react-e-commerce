@@ -1,8 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useContext} from 'react';
 import './login.css';
-import sillon from "../../assets/images/green-chair-login.png"
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { loginChair } from '../../assets/images';
+import { AuthContext } from '../../contexts';
 
 
 type Props = {}
@@ -11,7 +11,25 @@ const Login = (props: Props) => {
 
   const [user, setUser] = useState({userName:'', password:''});
   const [userData, setUserData] = useState([])
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
+  // const { login, logout } = useContext(AuthContext)
+  const navigate = useNavigate();
+  
+  const onLogin = () => {
+
+    // login('Alba M')
+
+    navigate('/homepage', {
+      replace: true
+    });
+  }
+
+  // const onLogout = () => {
+  //   logout();
+  //   navigate('/', {
+  //     replace:true
+  //   })
+  // }
 
   const setNewUsername = (newName:string) => {
     console.log("dentro de setNewUsername")
@@ -36,7 +54,6 @@ const Login = (props: Props) => {
     const correctUserAndPassword = userData.find(usuario => usuario.name === user.userName && usuario.Password === user.password);
     const correctUser = userData.find(usuario => usuario.name === user.userName)
     const correctPassword = userData.find(usuario => usuario.Password === user.password);
-    const incorrectUserAndPassword = userData.find(usuario => usuario.name !== user.userName && usuario.Password !== user.password)
 
   if(user.userName === "" || user.password === ""){
     errors.name = "Username and Password are required"
@@ -53,8 +70,9 @@ const Login = (props: Props) => {
     if(correctUserAndPassword){
       errors.name = "";
       errors.password = "";
+      console.log(correctUserAndPassword)
       alert("Correct login");
-      <Navigate to="/homepage" />
+      onLogin();
     }
 
     return errors;
@@ -90,10 +108,10 @@ const Login = (props: Props) => {
         <form className="login-form" onSubmit={e => {handleSubmit(e);console.log(user)}}>
             <label htmlFor="username" className="form-label">Username:
             <input type="text" value={user.userName} className="form-input" id="username" name="username" ref={inputName} onChange={(e) =>setNewUsername(e.target.value)} />
-            {errors.name && <p className="error-message">{errors.name}</p>}</label>
+            {errors.name && <p className="error-message-user">{errors.name}</p>}</label>
             <label htmlFor="password" className="form-label">Password:
             <input type="password" value={user.password} className="form-input" id="password" name="password" onChange={(e) => setNewPassword(e.target.value)}/>
-            {errors.password && <p className="error-message">{errors.password}</p>}</label>
+            {errors.password && <p className="error-message-password">{errors.password}</p>}</label>
 
         
             <button className='login-btn' >Log In</button>

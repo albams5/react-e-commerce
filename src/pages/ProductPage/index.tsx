@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import { Navigation } from "../../components/layout/Navbar"
 import './productPage.css'
 import { useEffect, useState } from "react";
 import star from '../../assets/icons/star.png'
+import cart from '../../assets/icons/shoppingCart.png'
 
 
 export const ProductPage = () => {
@@ -33,23 +33,29 @@ export const ProductPage = () => {
     return (
     <>
         <div className="container-product-page">
-            <img className="rating-img" src={star} />{choosenProduct && <span>{choosenProduct.Rating}</span>}
-            {choosenProduct && <img src ={choosenProduct.Image} />}
-            {choosenProduct && <h2>{choosenProduct.name}</h2>}
+            {choosenProduct && <img className="productpage-img" src ={choosenProduct.Image} />}
+            <div className="rating-info">
+                <img className="rating-img" src={star} />{choosenProduct && <span>{choosenProduct.Rating}</span>}
+                {choosenProduct && <h2>{choosenProduct.name}</h2>}
+            </div>
             {choosenProduct && <p>{choosenProduct.Collection}</p>}
             {choosenProduct && (
-                <div>
+                <div className="color-info">
                     <h4>Colors:</h4>
                     <span>
                         {choosenProduct.Colors.map((color, index) => (
-                            <p key={index}>{color} </p>
+                            <span key={index}>{color} </span>
                         ))}
                     </span>
                 </div>
             )}
 
         </div>
-        <Navigation/>
+        <section className="container-addtocart">
+        {choosenProduct && <p className="product-page-price">${choosenProduct.Price}</p>}
+        <button className="addtocart-btn">Add to Cart<img className="cart-icon" src={cart} /></button>
+
+        </section>
     </>
     )
 }
