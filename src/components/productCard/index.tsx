@@ -29,7 +29,7 @@ const ProductCard = (props: Props) => {
     <>
       {productData.map(product=>
         <div key={product.Id}>
-          <Link to={`/productpage/${product.Id.toString()}`}>
+          <Link to={`/${product.Id.toString()}`}>
             <div className="container-product-img">
                 <img className="product-img" src={product.Image} />
                 <div className="container-like">

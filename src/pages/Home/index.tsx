@@ -5,9 +5,9 @@ import bell from "../../assets/icons/bell.png"
 import dots from "../../assets/icons/dots.png"
 import chairBackground from "../../assets/images/product-at-home.jpg"
 import ProductCard from '../../components/productCard';
-
  
  export const Home = () => (
+
     <>
         <div className="main-container">
             <header className="home-header">
@@ -45,7 +45,6 @@ import ProductCard from '../../components/productCard';
             <Navigation/>
         </div>
     </>
- 
  )
 
 

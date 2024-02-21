@@ -25,7 +25,8 @@ h2{
 
 .container-addtocart{
     display: flex;
-    justify-content:space-around
+    justify-content:space-around;
+    width: 430px;
 }
 
 .addtocart-btn{
@@ -52,7 +53,19 @@ h2{
 .productpage-img{
     height: 470px;
     width: 430px;
+    border-radius: 0 0 50px 50px;
+    /* position: relative; */
 }
+
+ .productpage-back-icon{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #F9F8F6;
+    cursor: pointer;
+} 
 
 .rating-info{
     margin-top: 20px;
@@ -62,3 +75,10 @@ h2{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* .productpage-container-img-icons{
+    height: 470px;
+    width: 430px;
+    border-radius: 0 0 50px 50px;
+    position: relative;
+} */

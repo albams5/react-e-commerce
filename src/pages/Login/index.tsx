@@ -1,35 +1,44 @@
-import React, {useState, useEffect, useRef, useContext} from 'react';
+import React, {useState, useEffect, useRef, useContext, createContext, PropsWithChildren, FC} from 'react';
 import './login.css';
 import { useNavigate } from 'react-router-dom';
 import { loginChair } from '../../assets/images';
-import { AuthContext } from '../../contexts';
+// import { useHandleUser } from '../../context/userContext';
+// import { User } from '../../context/userContext';
+
+type Errors = {
+  name: string,
+  password: string
+}
+
+type UserInput = {
+  userName: string,
+  password: string
+}
 
 
-type Props = {}
-
-const Login = (props: Props) => {
+const Login = () => {
 
   const [user, setUser] = useState({userName:'', password:''});
   const [userData, setUserData] = useState([])
   const [errors, setErrors] = useState({});
-  // const { login, logout } = useContext(AuthContext)
   const navigate = useNavigate();
   
   const onLogin = () => {
 
-    // login('Alba M')
-
     navigate('/homepage', {
-      replace: true
+      replace: true,
+      state: {
+        logged: true,
+      }
     });
   }
 
-  // const onLogout = () => {
-  //   logout();
-  //   navigate('/', {
-  //     replace:true
-  //   })
+  // const dispatch = useAuthDispatch();
+  // const handleLogin = () => {
+  //   dispatch({type: 'LOGIN'})
+  //   navigate('/homepage')
   // }
+
 
   const setNewUsername = (newName:string) => {
     console.log("dentro de setNewUsername")
@@ -49,8 +58,11 @@ const Login = (props: Props) => {
     
   }
 
-  const Validation = (user) => {
-    const errors = {}
+  const Validation = (user: UserInput) => {
+    const errors: Errors = {
+      name: "",
+      password: ""
+    }
     const correctUserAndPassword = userData.find(usuario => usuario.name === user.userName && usuario.Password === user.password);
     const correctUser = userData.find(usuario => usuario.name === user.userName)
     const correctPassword = userData.find(usuario => usuario.Password === user.password);
@@ -73,15 +85,18 @@ const Login = (props: Props) => {
       console.log(correctUserAndPassword)
       alert("Correct login");
       onLogin();
+      // const user = useHandleUser();
+      user.setUser(correctUserAndPassword)
     }
 
     return errors;
 
   }
 
-  const handleSubmit = (e)=> {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault();
     setErrors(Validation(user))
+    // handleLogin();
   }
 
   useEffect(() => {

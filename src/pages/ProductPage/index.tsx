@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import './productPage.css'
 import { useEffect, useState } from "react";
 import star from '../../assets/icons/star.png'
 import cart from '../../assets/icons/shoppingCart.png'
+import back from '../../assets/icons/back.png'
 
 
 export const ProductPage = () => {
@@ -33,7 +34,14 @@ export const ProductPage = () => {
     return (
     <>
         <div className="container-product-page">
-            {choosenProduct && <img className="productpage-img" src ={choosenProduct.Image} />}
+            
+            <button className="productpage-back-icon">
+                <Link to="/homepage">
+                    <img  src={back} />
+                </Link>
+            </button>
+            {choosenProduct && <img className="productpage-img" alt={choosenProduct.name} src ={choosenProduct.Image} />}
+            
             <div className="rating-info">
                 <img className="rating-img" src={star} />{choosenProduct && <span>{choosenProduct.Rating}</span>}
                 {choosenProduct && <h2>{choosenProduct.name}</h2>}
