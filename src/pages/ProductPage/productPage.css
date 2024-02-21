@@ -50,6 +50,11 @@ h2{
     height: 20px
 }
 
+.productpage-main-img{
+    width: 430px;
+    position: relative;
+}
+
 .productpage-img{
     height: 470px;
     width: 430px;
@@ -59,13 +64,20 @@ h2{
 
  .productpage-back-icon{
     position: absolute;
-    margin-top: 10px;
+    margin-top: 27px;
     margin-left: 10px;
     border-radius: 50%;
     border: none;
     background-color: #F9F8F6;
     cursor: pointer;
 } 
+
+.product-page-alert{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+}
 
 .rating-info{
     margin-top: 20px;

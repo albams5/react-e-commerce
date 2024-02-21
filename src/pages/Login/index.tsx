@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef, useContext, createContext, PropsWith
 import './login.css';
 import { useNavigate } from 'react-router-dom';
 import { loginChair } from '../../assets/images';
+import { useAuthDispatch } from '../../context/AuthContext';
 // import { useHandleUser } from '../../context/userContext';
 // import { User } from '../../context/userContext';
 
@@ -23,21 +24,21 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
   
-  const onLogin = () => {
+  // const onLogin = () => {
 
-    navigate('/homepage', {
-      replace: true,
-      state: {
-        logged: true,
-      }
-    });
-  }
-
-  // const dispatch = useAuthDispatch();
-  // const handleLogin = () => {
-  //   dispatch({type: 'LOGIN'})
-  //   navigate('/homepage')
+  //   navigate('/homepage', {
+  //     replace: true,
+  //     state: {
+  //       logged: true,
+  //     }
+  //   });
   // }
+
+  const dispatch = useAuthDispatch();
+  const handleLogin = () => {
+    dispatch({type: 'LOGIN'})
+    navigate('/homepage')
+  }
 
 
   const setNewUsername = (newName:string) => {
@@ -84,9 +85,8 @@ const Login = () => {
       errors.password = "";
       console.log(correctUserAndPassword)
       alert("Correct login");
-      onLogin();
-      // const user = useHandleUser();
-      user.setUser(correctUserAndPassword)
+      // onLogin();
+      handleLogin();
     }
 
     return errors;
@@ -96,7 +96,7 @@ const Login = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault();
     setErrors(Validation(user))
-    // handleLogin();
+    
   }
 
   useEffect(() => {

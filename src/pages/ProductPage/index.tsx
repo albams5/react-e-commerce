@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import './productPage.css'
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import star from '../../assets/icons/star.png'
 import cart from '../../assets/icons/shoppingCart.png'
 import back from '../../assets/icons/back.png'
@@ -31,17 +31,23 @@ export const ProductPage = () => {
     console.log(choosenProduct)
     choosenProduct && console.log(choosenProduct.Colors)
 
+
+    const addToBag = () => {
+        
+    }
+
     return (
     <>
         <div className="container-product-page">
-            
-            <button className="productpage-back-icon">
-                <Link to="/homepage">
-                    <img  src={back} />
-                </Link>
-            </button>
-            {choosenProduct && <img className="productpage-img" alt={choosenProduct.name} src ={choosenProduct.Image} />}
-            
+            <section className="productpage-main-img">
+                <button className="productpage-back-icon">
+                    <Link to="/homepage">
+                        <img  src={back} />
+                    </Link>
+                </button>
+                {choosenProduct && <img className="productpage-img" alt={choosenProduct.name} src ={choosenProduct.Image} />}
+                <Link to={"/shoppingcart"}><div className="product-page-alert">0</div></Link>
+            </section>
             <div className="rating-info">
                 <img className="rating-img" src={star} />{choosenProduct && <span>{choosenProduct.Rating}</span>}
                 {choosenProduct && <h2>{choosenProduct.name}</h2>}
@@ -61,7 +67,7 @@ export const ProductPage = () => {
         </div>
         <section className="container-addtocart">
         {choosenProduct && <p className="product-page-price">${choosenProduct.Price}</p>}
-        <button className="addtocart-btn">Add to Cart<img className="cart-icon" src={cart} /></button>
+        <button className="addtocart-btn" onClick={addToBag}>Add to Cart<img className="cart-icon" src={cart} /></button>
 
         </section>
     </>

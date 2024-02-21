@@ -1,0 +1,25 @@
+.main-container-shoppingcart{
+    width: 430px;
+    height: 800px;
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+}
+
+.shoppingcart-header{
+    height: 180px;
+    width: 430px;
+    background-color: #E1EEDD;
+    border-radius: 0 0 50px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-back-icon{
+    margin: 15px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: #F9F8F6;
+    cursor: pointer;
+}

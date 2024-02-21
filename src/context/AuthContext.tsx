@@ -39,13 +39,13 @@ const useAuthState = () => {
     if(context === undefined){
         throw new Error('useAuthState must be used within an AuthProvider')
     }
-    return context
-}
+    return context;
+};
 
 const useAuthDispatch = () => {
     const context = useContext(AuthDispatchContext);
     if (context === undefined){
-        throw new Error
+        throw new Error('useAuthDispatch must be used within an AuthProvider')
     }
     return context;
 }
