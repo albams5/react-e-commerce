@@ -24,12 +24,12 @@
 .error-message-user{
     color: red;
     position: absolute;
-    top: 82%;
+    top: 92%;
 }
 .error-message-password{
     color: red;
     position: absolute;
-    top: 90%;
+    top: 114%;
 }
 
 .none{

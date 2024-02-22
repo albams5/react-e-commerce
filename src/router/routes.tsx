@@ -3,19 +3,20 @@ import { Home } from "../pages/Home";
 import { ShoppingCart } from "../pages/ShoppingCart";
 import { ProductPage } from "../pages/ProductPage";
 import Login from "../pages/Login";
-import { UserContext } from "../context/userContext";
+import { UserContext, UserContextProvider } from "../context/userContext";
 import ProtectedRoute from "./ProtectedRoute";
 import { AuthProvider } from "../context/AuthContext";
+import { useState } from "react";
+import React from "react";
 
 type Props = {}
 
 export const AppRoutes = (props: Props) => {
 
-
   return (
     <AuthProvider>
       <BrowserRouter>
-        <UserContext>
+        <UserContextProvider >
             <Routes>
               <Route index element={<Login />}/>
               <Route path="/homepage" element={<ProtectedRoute component={Home} />} />
@@ -24,7 +25,7 @@ export const AppRoutes = (props: Props) => {
               <Route path="/shoppingcart" element={<ProtectedRoute component={ShoppingCart} />} />
               <Route path="*" element={<Navigate replace to="/" />}/>
             </Routes>
-        </UserContext>
+        </UserContextProvider>
       </BrowserRouter>
     </AuthProvider>
   )

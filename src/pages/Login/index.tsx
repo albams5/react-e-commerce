@@ -3,8 +3,8 @@ import './login.css';
 import { useNavigate } from 'react-router-dom';
 import { loginChair } from '../../assets/images';
 import { useAuthDispatch } from '../../context/AuthContext';
-// import { useHandleUser } from '../../context/userContext';
-// import { User } from '../../context/userContext';
+import { UserContext } from '../../context/userContext';
+
 
 type Errors = {
   name: string,
@@ -22,17 +22,9 @@ const Login = () => {
   const [user, setUser] = useState({userName:'', password:''});
   const [userData, setUserData] = useState([])
   const [errors, setErrors] = useState({});
+  const userInfo =  useContext(UserContext)
   const navigate = useNavigate();
-  
-  // const onLogin = () => {
 
-  //   navigate('/homepage', {
-  //     replace: true,
-  //     state: {
-  //       logged: true,
-  //     }
-  //   });
-  // }
 
   const dispatch = useAuthDispatch();
   const handleLogin = () => {
@@ -42,7 +34,6 @@ const Login = () => {
 
 
   const setNewUsername = (newName:string) => {
-    console.log("dentro de setNewUsername")
     setUser(user => ({
       ...user,
       userName: newName
@@ -51,7 +42,6 @@ const Login = () => {
   }
 
   const setNewPassword = (newPassword:string) => {
-    console.log("dentro de setNewPassword")
     setUser(user => ({
       ...user,
       password: newPassword
@@ -80,14 +70,13 @@ const Login = () => {
     errors.password = ""
   }
 
-    if(correctUserAndPassword){
-      errors.name = "";
-      errors.password = "";
-      console.log(correctUserAndPassword)
-      alert("Correct login");
-      // onLogin();
-      handleLogin();
-    }
+  if(correctUserAndPassword){
+    errors.name = "";
+    errors.password = "";
+    alert("Correct login");
+    handleLogin();
+    userInfo.setUserData(correctUserAndPassword)
+  }
 
     return errors;
 
@@ -104,7 +93,6 @@ const Login = () => {
       .then(res=>res.json())
       .then(clients =>{setUserData(clients)}
         )
-        console.log(userData)
   }, [user]);
 
 
@@ -120,7 +108,7 @@ const Login = () => {
           <img src={loginChair} alt="Green Chair Login" className='login-chair'/>
           <h2 className ="shop-title">Creative Concept Design</h2>
         </div>
-        <form className="login-form" onSubmit={e => {handleSubmit(e);console.log(user)}}>
+        <form className="login-form" onSubmit={e => {handleSubmit(e)}}>
             <label htmlFor="username" className="form-label">Username:
             <input type="text" value={user.userName} className="form-input" id="username" name="username" ref={inputName} onChange={(e) =>setNewUsername(e.target.value)} />
             {errors.name && <p className="error-message-user">{errors.name}</p>}</label>

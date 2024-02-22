@@ -4,7 +4,18 @@ import { useContext, useEffect, useState } from "react";
 import star from '../../assets/icons/star.png'
 import cart from '../../assets/icons/shoppingCart.png'
 import back from '../../assets/icons/back.png'
+import toast, {Toaster} from 'react-hot-toast'
+import { User, UserContext } from "../../context/userContext";
 
+export interface Product {
+    name: string,
+    Collection: string,
+    Rating: number,
+    Price: number,
+    Id: string,
+    Image: string,
+    Colors: string[]
+}
 
 export const ProductPage = () => {
     const params = useParams();
@@ -25,19 +36,26 @@ export const ProductPage = () => {
     
         fetchingProducts();
       }, []);
-     console.log(products)
 
     const choosenProduct = products?.find(product => product.Id === params.productId );
-    console.log(choosenProduct)
     choosenProduct && console.log(choosenProduct.Colors)
 
-
-    const addToBag = () => {
-        
+    const[productsAdded, setProductsAdded] = useState(0)
+    const user = useContext(UserContext)
+    const userLogged = user.userData;
+    
+    const addToBag = (choosenProduct: Product, userLogged: User) => {
+        toast.success('Successfully added to your bag!')
+        setProductsAdded(productsAdded + 1);
+        if(choosenProduct && userLogged){
+            userLogged.Cart.push(choosenProduct);
+        }
+        console.log(userLogged);
     }
 
     return (
     <>
+        <Toaster/>
         <div className="container-product-page">
             <section className="productpage-main-img">
                 <button className="productpage-back-icon">
@@ -46,7 +64,7 @@ export const ProductPage = () => {
                     </Link>
                 </button>
                 {choosenProduct && <img className="productpage-img" alt={choosenProduct.name} src ={choosenProduct.Image} />}
-                <Link to={"/shoppingcart"}><div className="product-page-alert">0</div></Link>
+                <Link to={"/shoppingcart"}><div className="product-page-alert">{productsAdded}</div></Link>
             </section>
             <div className="rating-info">
                 <img className="rating-img" src={star} />{choosenProduct && <span>{choosenProduct.Rating}</span>}
@@ -67,8 +85,7 @@ export const ProductPage = () => {
         </div>
         <section className="container-addtocart">
         {choosenProduct && <p className="product-page-price">${choosenProduct.Price}</p>}
-        <button className="addtocart-btn" onClick={addToBag}>Add to Cart<img className="cart-icon" src={cart} /></button>
-
+        {userLogged && choosenProduct && (<button onClick={() => addToBag(choosenProduct, userLogged)} className="addtocart-btn">Add to Cart<img className="cart-icon" src={cart} /></button>)}
         </section>
     </>
     )

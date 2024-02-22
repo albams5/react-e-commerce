@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import sillaMadera from "../../assets/images/silla-madera.jpg"
 import like from "../../assets/icons/like.png"
 import add from "../../assets/icons/add.png"
 import "./productCard.css"
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -17,7 +16,6 @@ const ProductCard = (props: Props) => {
       .then(products=> setProductData(products))
   }
 
-    console.log(productData)
 
   useEffect(() => {
     fetchProducts();

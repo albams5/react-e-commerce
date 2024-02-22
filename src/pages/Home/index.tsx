@@ -1,14 +1,15 @@
- //aquí debería estar la HOME
 import './homepage.css'
 import { Navigation } from "../../components/layout/Navbar";
 import bell from "../../assets/icons/bell.png"
 import dots from "../../assets/icons/dots.png"
 import chairBackground from "../../assets/images/product-at-home.jpg"
 import ProductCard from '../../components/productCard';
+import { useContext } from 'react';
+import { UserContext } from '../../context/userContext';
 
- 
  export const Home = () => {
 
+    const user = useContext(UserContext)
 
     return (
         <>
@@ -16,7 +17,7 @@ import ProductCard from '../../components/productCard';
                 <header className="home-header">
                     <div className="bubble"><img className="bubble-icon" src={dots} alt="menu-dots" /></div>
                     <div className="bubble right"><img className="bubble-icon" src={bell} alt="alert" /></div>
-                    <span className="welcome-span">Welcome, <strong className ="strong-client-name">John Doe!</strong></span>
+                    <span className="welcome-span">Welcome, <strong className ="strong-client-name">{user.userData?.name}!</strong></span>
                     <div className="input-wrapper">
                         <input type="search" className="input explorer" placeholder="Search" />
                         <svg xmlns="http://www.w3.org/2000/svg" className="input-icon" viewBox="0 0 20 20" fill="currentColor">

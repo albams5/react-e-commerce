@@ -1,33 +1,29 @@
-import { FC, PropsWithChildren, createContext, useContext, useState } from "react"
+import React from "react";
+import { FC, PropsWithChildren, createContext, useState } from "react"
+import { Product } from "../pages/ProductPage";
 
 export interface User {
     name: string,
     Email: string,
     Password: string,
-    Cart: string[],
-    Wishlist: string[],
+    Cart: Product[],
+    Wishlist: Product[],
     Id: number
 }
 
-interface UserContext {
-    user: User[],
-    setUser: Function
-  }
+interface UserContextType {
+    userData: User | null,
+    setUserData: Function
+}
 
-const user = createContext({} as UserContext)
-export const UserContext:FC<PropsWithChildren<{}>> = ({children}) => {
-    const [userData, setUserData] = useState([])
+export const UserContext = createContext({} as UserContextType);
+
+
+export const UserContextProvider:FC<PropsWithChildren<{}>> = ({children}) => {
+    const [userData, setUserData] = useState(null)
     return (
-    <user.Provider value={{ user: userData, setUser: setUserData }}>
+    <UserContext.Provider value={{userData, setUserData}}>
         {children}
-    </user.Provider>
+    </UserContext.Provider>
     )
     }
-
-export const useHandleUser = () => {
-    const myUser = useContext(user);
-    if(!myUser){
-        throw new Error;
-    }
-    return myUser;
-}

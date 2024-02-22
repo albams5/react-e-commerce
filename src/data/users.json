@@ -3,40 +3,40 @@
       "name": "John Doe",
       "Email ": "john.doe@example.com",
       "Password": "password123",
-      "Cart": "[item1, item2, item3]",
-      "Wishlist": "[item4, item5, item6]",
+      "Cart": [],
+      "Wishlist": [],
       "Id": 12345
     },
     {
       "name": "Jane Smith",
       "Email ": "jane.smith@example.com",
       "Password": "pass1234",
-      "Cart": "[item7, item8, item9]",
-      "Wishlist": "[item10, item11, item12]",
+      "Cart": [],
+      "Wishlist": [],
       "Id": 67890
     },
     {
       "name": "Mike Johnson",
       "Email ": "mike.johnson@example.com",
       "Password": "mikepass",
-      "Cart": "[item13, item14, item15]",
-      "Wishlist": "[item16, item17, item18]",
+      "Cart": [],
+      "Wishlist": [],
       "Id": 54321
     },
     {
       "name": "Sarah Williams",
       "Email ": "sarah.williams@example.com",
       "Password": "password456",
-      "Cart": "[item19, item20, item21]",
-      "Wishlist": "[item22, item23, item24]",
+      "Cart": [],
+      "Wishlist": [],
       "Id": 98765
     },
     {
       "name": "Chris Davis",
       "Email ": "chris.davis@example.com",
       "Password": "pass789",
-      "Cart": "[item25, item26, item27]",
-      "Wishlist": "[item28, item29, item30]",
+      "Cart": [],
+      "Wishlist": [],
       "Id": 24680
     }
   ]
