@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useContext, createContext, PropsWithChildren, FC} from 'react';
+import React, {useState, useEffect, useRef, useContext} from 'react';
 import './login.css';
 import { useNavigate } from 'react-router-dom';
 import { loginChair } from '../../assets/images';
@@ -73,7 +73,6 @@ const Login = () => {
   if(correctUserAndPassword){
     errors.name = "";
     errors.password = "";
-    alert("Correct login");
     handleLogin();
     userInfo.setUserData(correctUserAndPassword)
   }
@@ -85,7 +84,6 @@ const Login = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault();
     setErrors(Validation(user))
-    
   }
 
   useEffect(() => {
@@ -116,11 +114,10 @@ const Login = () => {
             <input type="password" value={user.password} className="form-input" id="password" name="password" onChange={(e) => setNewPassword(e.target.value)}/>
             {errors.password && <p className="error-message-password">{errors.password}</p>}</label>
 
-        
             <button className='login-btn' >Log In</button>
-        
+
         </form>
-        
+
     </div>
   )
 }

@@ -7,11 +7,15 @@ import { User, UserContext } from '../../context/UserContext'
 import { Product } from '../../pages/ProductPage'
 import toast, { Toaster } from 'react-hot-toast'
 
-type Props = {}
+type Props = {
+  category: string
+}
 
 const ProductCard = (props: Props) => {
 
-  const [productData, setProductData] = useState([])
+  const [productData, setProductData] = useState([]);
+  const filteredProducts = productData.filter(product => product.Category.includes(props.category));
+
 
   const fetchProducts = () => {
     fetch('src/data/products.json')
@@ -38,7 +42,7 @@ const ProductCard = (props: Props) => {
   return (
     <>
         <Toaster/>
-      {productData.map(product=>
+      {filteredProducts.map(product=>
         <div key={product.Id}>
           <Link to={`/${product.Id.toString()}`}>
             <div className="container-product-img">

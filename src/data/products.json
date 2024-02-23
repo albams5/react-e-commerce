@@ -6,7 +6,8 @@
       "Price": 75.99,
       "Id": "1",
       "Image": "src/assets/images/sillon-mairo.jpg",
-      "Colors": ["Brown", "Light Beige"]
+      "Colors": ["Brown", "Light Beige"],
+      "Category": ["Armchair", "All"]
     },
     {
       "name": "Ana Armchair",
@@ -15,7 +16,8 @@
       "Price": 89.99,
       "Id": "2",
       "Image": "src/assets/images/ana-armchair.jpg",
-      "Colors": ["Dark Green", "Black"]
+      "Colors": ["Dark Green", "Black"],
+      "Category": ["Armchair", "All"]
     },
     {
       "name": "Robine Armchair",
@@ -24,7 +26,8 @@
       "Price": 64.99,
       "Id": "3",
       "Image": "src/assets/images/fiji-armchair.jpg",
-      "Colors": ["Grey"]
+      "Colors": ["Grey"],
+      "Category": ["Armchair", "All"]
 
     },
     {
@@ -34,7 +37,8 @@
       "Price": 75.99,
       "Id": "4",
       "Image": "src/assets/images/silla-verde.jpg",
-      "Colors": ["Dark Green", "Light Beige"]
+      "Colors": ["Dark Green", "Light Beige"],
+      "Category": ["Chair", "All"]
 
     },
     {
@@ -44,7 +48,8 @@
       "Price": 54.99,
       "Id": "5",
       "Image": "src/assets/images/silla-patas-doradas.jpg",
-      "Colors": ["Light Beige"]
+      "Colors": ["Light Beige"],
+      "Category": ["Chair", "All"]
 
     },
     {
@@ -54,7 +59,41 @@
       "Price": 119.99,
       "Id": "6",
       "Image": "src/assets/images/silla-madera.jpg",
-      "Colors": ["Dark Green", "Light Beige", "Black", "Brown", "White"]
+      "Colors": ["Dark Green", "Light Beige", "Black", "Brown", "White"],
+      "Category": ["Chair", "All"]
+
+    },
+    {
+      "name": "Alba Sofa",
+      "Collection": "Serenity Collection",
+      "Rating": 4.8,
+      "Price": 1200,
+      "Id": "7",
+      "Image": "src/assets/images/sofa-alba.jpg",
+      "Colors": ["Dark Green", "Light Beige"],
+      "Category": ["Sofa", "All"]
+
+    },
+    {
+      "name": "Elliot Sofa",
+      "Collection": "Aqua Collection",
+      "Rating": 4.9,
+      "Price": 979.99,
+      "Id": "8",
+      "Image": "src/assets/images/sofa-elliot.jpg",
+      "Colors": ["White", "Dark Green"],
+      "Category": ["Sofa", "All"]
+
+    },
+    {
+      "name": "Sofia Sofa",
+      "Collection": "Spring 24 Collection",
+      "Rating": 4.7,
+      "Price": 819.99,
+      "Id": "9",
+      "Image": "src/assets/images/sofa-sofia.jpg",
+      "Colors": ["White", "Light Beige"],
+      "Category": ["Sofa", "All"]
 
     }
   ]

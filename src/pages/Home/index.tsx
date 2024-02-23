@@ -4,12 +4,17 @@ import bell from "../../assets/icons/bell.png"
 import dots from "../../assets/icons/dots.png"
 import chairBackground from "../../assets/images/product-at-home.jpg"
 import ProductCard from '../../components/productCard';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../../context/UserContext';
 
  export const Home = () => {
 
-    const user = useContext(UserContext)
+    const user = useContext(UserContext);
+    const [category, setCategory] = useState("All")
+
+    const chooseCategory = (category:string) => {
+        setCategory(category)
+    }
 
     return (
         <>
@@ -36,14 +41,14 @@ import { UserContext } from '../../context/UserContext';
                         </div>
                     </div>
                     <div>
-                    <button className="btn-categories">All</button>
-                    <button className="btn-categories">Armchair</button>
-                    <button className="btn-categories">Ergonomic</button>
-                    <button className="btn-categories">Sofa</button>
+                    <button onClick={() =>chooseCategory("All")} className="btn-categories">All</button>
+                    <button onClick={() =>chooseCategory("Armchair")} className="btn-categories">Armchair</button>
+                    <button onClick={() =>chooseCategory("Chair")} className="btn-categories">Chair</button>
+                    <button onClick={() =>chooseCategory("Sofa")} className="btn-categories">Sofa</button>
 
                     </div>
                     <div className="products-container">
-                        <ProductCard/>
+                        <ProductCard category={category} />
 
                     </div>
                 </div>
