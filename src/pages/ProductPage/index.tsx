@@ -5,7 +5,8 @@ import star from '../../assets/icons/star.png'
 import cart from '../../assets/icons/shoppingCart.png'
 import back from '../../assets/icons/back.png'
 import toast, {Toaster} from 'react-hot-toast'
-import { User, UserContext } from "../../context/userContext";
+import { User, UserContext } from "../../context/UserContext";
+import bag from '../../assets/icons/bag.png'
 
 export interface Product {
     name: string,
@@ -37,16 +38,13 @@ export const ProductPage = () => {
         fetchingProducts();
       }, []);
 
-    const choosenProduct = products?.find(product => product.Id === params.productId );
-    choosenProduct && console.log(choosenProduct.Colors)
+    const choosenProduct: Product = products?.find((product: { Id: string | undefined }) => product.Id === params.productId );
 
-    const[productsAdded, setProductsAdded] = useState(0)
     const user = useContext(UserContext)
     const userLogged = user.userData;
     
     const addToBag = (choosenProduct: Product, userLogged: User) => {
         toast.success('Successfully added to your bag!')
-        setProductsAdded(productsAdded + 1);
         if(choosenProduct && userLogged){
             userLogged.Cart.push(choosenProduct);
         }
@@ -64,7 +62,7 @@ export const ProductPage = () => {
                     </Link>
                 </button>
                 {choosenProduct && <img className="productpage-img" alt={choosenProduct.name} src ={choosenProduct.Image} />}
-                <Link to={"/shoppingcart"}><div className="product-page-alert">{productsAdded}</div></Link>
+                <Link to={"/shoppingcart"}><div className="product-page-alert"><img className="productpage-bag" src={bag}/></div></Link>
             </section>
             <div className="rating-info">
                 <img className="rating-img" src={star} />{choosenProduct && <span>{choosenProduct.Rating}</span>}

@@ -3,7 +3,7 @@ import { Home } from "../pages/Home";
 import { ShoppingCart } from "../pages/ShoppingCart";
 import { ProductPage } from "../pages/ProductPage";
 import Login from "../pages/Login";
-import { UserContext, UserContextProvider } from "../context/userContext";
+import { UserContext, UserContextProvider } from "../context/UserContext";
 import ProtectedRoute from "./ProtectedRoute";
 import { AuthProvider } from "../context/AuthContext";
 import { useState } from "react";

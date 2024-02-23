@@ -23,7 +23,6 @@ body {
     border-top-right-radius: 0;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    position: absolute;
     display: grid;
     grid-template-columns: auto auto
 }
@@ -61,6 +60,7 @@ body {
     height: 2rem;
     width: 12rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer
 }
 
 .input-wrapper {
@@ -73,8 +73,10 @@ body {
   .input {
     box-sizing: border-box;
     color: #191919;
-    padding: 15px 15px 15px 35px;
+    padding-left: 40px;
+    height: 30px;
     width: 100%;
+    cursor: pointer;
   }
 
   .input-icon {
@@ -95,7 +97,7 @@ body {
     height: 137px;
     width: 333px;
     border-radius: 30px;
-    margin-top: 230px;
+    margin-top: 50px;
     object-fit:cover;
     object-position:center;
     opacity: 0.6;
@@ -107,7 +109,7 @@ body {
 
   .sale-banner-info{
     position: absolute;
-    top: 65%;
+    top: 37%;
     right: 15%
   } 
 

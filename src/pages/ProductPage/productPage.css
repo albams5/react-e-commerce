@@ -75,7 +75,7 @@ h2{
 .product-page-alert{
     position: absolute;
     top: 5%;
-    right: 10%;
+    right: 5%;
     cursor: pointer;
 }
 
@@ -88,9 +88,7 @@ h2{
     margin-bottom: 20px;
 }
 
-/* .productpage-container-img-icons{
-    height: 470px;
-    width: 430px;
-    border-radius: 0 0 50px 50px;
-    position: relative;
-} */
+.productpage-bag{
+    width: 60%;
+    height: 50%;
+}

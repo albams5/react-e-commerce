@@ -3,7 +3,7 @@ import './login.css';
 import { useNavigate } from 'react-router-dom';
 import { loginChair } from '../../assets/images';
 import { useAuthDispatch } from '../../context/AuthContext';
-import { UserContext } from '../../context/userContext';
+import { UserContext } from '../../context/UserContext';
 
 
 type Errors = {
