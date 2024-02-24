@@ -3,11 +3,11 @@ import { Home } from "../pages/Home";
 import { ShoppingCart } from "../pages/ShoppingCart";
 import { ProductPage } from "../pages/ProductPage";
 import Login from "../pages/Login";
-import { UserContext, UserContextProvider } from "../context/UserContext";
+import { UserContextProvider } from "../context/UserContext";
 import ProtectedRoute from "./ProtectedRoute";
 import { AuthProvider } from "../context/AuthContext";
-import { useState } from "react";
-import React from "react";
+import Wishlist from "../pages/Wishlist";
+import Profile from "../pages/Profile";
 
 type Props = {}
 
@@ -21,7 +21,8 @@ export const AppRoutes = (props: Props) => {
               <Route index element={<Login />}/>
               <Route path="/homepage" element={<ProtectedRoute component={Home} />} />
               <Route path="/:productId" element={<ProtectedRoute component={ProductPage} />} />
-              <Route path="/wishlist" />
+              <Route path="/wishlist" element={<ProtectedRoute component={Wishlist}/>} />
+              <Route path="/profile" element={<ProtectedRoute component={Profile}/>} />
               <Route path="/shoppingcart" element={<ProtectedRoute component={ShoppingCart} />} />
               <Route path="*" element={<Navigate replace to="/" />}/>
             </Routes>

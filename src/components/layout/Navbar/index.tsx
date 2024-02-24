@@ -21,7 +21,7 @@ export function Navigation() {
           <Link to="/shoppingcart"><img src={shoppingCart} alt="Shopping Cart" /></Link>
         </li>
         <li>
-          <Link to="/"><img src={user} alt="Login" /></Link>
+          <Link to="/profile"><img src={user} alt="Login" /></Link>
         </li>
       </ul>
     </nav>

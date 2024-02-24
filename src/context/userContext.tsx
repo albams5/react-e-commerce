@@ -1,4 +1,3 @@
-import React from "react";
 import { FC, PropsWithChildren, createContext, useState } from "react"
 import { Product } from "../pages/ProductPage";
 
