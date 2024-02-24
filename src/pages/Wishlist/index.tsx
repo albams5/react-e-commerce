@@ -1,10 +1,21 @@
-import React from 'react'
+import Header from '../../components/layout/Header'
+import './wishlist.css'
+import { Navigation } from '../../components/layout/Navbar'
+import WishlistProductCard from '../../components/wishlistProdCard/WishlistProductCard'
 
 type Props = {}
 
 const Wishlist = (props: Props) => {
+
+
   return (
-    <div>Wishlist</div>
+    <>
+    <div className="main-container-wishlist">
+      <Header page="Wishlist"/>
+      <WishlistProductCard/>
+    </div>
+      <Navigation/>
+    </>
   )
 }
 

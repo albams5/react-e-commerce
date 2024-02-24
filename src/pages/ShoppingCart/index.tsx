@@ -1,22 +1,14 @@
-import { Link } from "react-router-dom"
 import { Navigation } from "../../components/layout/Navbar"
 import './shoppingCart.css'
-import back from '../../assets/icons/back.png'
 import ShoppingCartProducts from "../../components/shoppingCartprodCard"
+import Header from "../../components/layout/Header"
 
 export const ShoppingCart = () => {
 
    return (
     <>
     <div className="main-container-shoppingcart">
-        <div className="shoppingcart-header">
-        <button className="shopping-back-icon">
-                <Link to="/homepage">
-                    <img src={back} />
-                </Link>
-            </button>
-            <h2>Shopping Cart</h2>
-        </div>
+        <Header page="Shopping Cart"/>
         <ShoppingCartProducts/>
     </div>
         <Navigation/>

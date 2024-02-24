@@ -1,0 +1,27 @@
+.wishlist-container-products{
+    margin-top: 30px;
+    width: 430px;
+    height: 400px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.wishlist-container-products::-webkit-scrollbar{
+    display: none;
+}
+
+.wishlist-productcard{
+    display: flex;
+    margin-top: 25px;
+    justify-content:center;
+}
+
+.wishlist-img{
+    width: 70px;
+    height: 80px
+}
+
+.wishlist-bin{
+    width: 1rem;
+}

@@ -36,22 +36,28 @@ const ProductCard = (props: Props) => {
   if(product && userLogged){
     userLogged.Cart.push(product);
   }
-  console.log(userLogged);
  }
+
+ const addToWishlist = (product: Product, userLogged: User | null) => {
+  toast.success('Successfully added to your wishlist!')
+  if(product && userLogged){
+    userLogged.Wishlist.push(product);
+  }
+ };
 
   return (
     <>
         <Toaster/>
       {filteredProducts.map(product=>
         <div key={product.Id}>
-          <Link to={`/${product.Id.toString()}`}>
             <div className="container-product-img">
+              <Link to={`/${product.Id.toString()}`}>
                 <img className="product-img" src={product.Image} />
+              </Link>
                 <div className="container-like">
-                    <img className="product-like" src={like}/>
+                    <img className="product-like" onClick={() =>addToWishlist(product, userLogged)} src={like}/>
                 </div>
             </div>
-          </Link>
             <div className="addtocart-container">
                 <p className="product-name">{product.name}</p>
                 <img className="addtocart-icon" onClick={() =>addToBag(product, userLogged)} src={add} />
