@@ -25,3 +25,8 @@
 .wishlist-bin{
     width: 1rem;
 }
+
+.wishlist-background-container{
+    display: flex;
+    justify-content: center;
+}

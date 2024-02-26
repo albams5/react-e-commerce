@@ -16,7 +16,8 @@ export interface Product {
     Id: string,
     Image: string,
     Colors: string[],
-    Category: string
+    Category: string,
+    Quantity: number
 }
 
 export const ProductPage = () => {

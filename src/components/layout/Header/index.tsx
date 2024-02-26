@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import back from '../../../assets/icons/back.png'
 import './header.css'
