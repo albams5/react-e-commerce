@@ -14,20 +14,17 @@ const ShoppingCartProducts = () => {
     console.log(userLogged?.Cart);
     
     let productsFiltered = userCart?.filter((item, index, array) => array.findIndex(p => p.Id === item.Id) === index)
-    const[productsToShow, setProductsToShow] = useState(productsFiltered)
+    const[productsToShow, setProductsToShow] = useState(productsFiltered);
 
 
     let subTotalSum = 0;
 
-    // useEffect (() => {
-        const removeItem = (id: string | undefined) => {
-            const productToRemove = productsFiltered?.find(product => product.Id === id);
-            const idToRemove:string | undefined = productToRemove?.Id;
-            let cartModified = productsFiltered?.filter(element => element.Id !== idToRemove);
-            setProductsToShow(cartModified);
-        };
-    //     removeItem(removeItem)
-    // }, [])
+    const removeItem = (id: string | undefined, quantityProduct, setQuantityProduct) => {
+        const idToRemove:string | undefined = id;
+        // let cartModified = productsFiltered?.filter(element => element.Id !== idToRemove);
+        // setProductsToShow(cartModified);
+        setQuantityProduct(0);
+    };
 
   return (
     <>
@@ -47,7 +44,7 @@ const ShoppingCartProducts = () => {
                             <p>Quantity:<img className="shoppingcart-quantity-btn" onClick={() => setQuantityProduct(quantityProduct && quantityProduct - 1)} src={minus} />{quantityProduct}<img className="shoppingcart-quantity-btn" onClick={() => setQuantityProduct(quantityProduct && quantityProduct + 1)} src={plus} /></p>
                         </div>
                         <div>
-                            <img className="shoppingcart-bin" onClick={() => removeItem(element.Id)} src={bin} />
+                            <img className="shoppingcart-bin" onClick={() => removeItem(element.Id, quantityProduct, setQuantityProduct)} src={bin} />
                         </div>
                     </div>
                     );
@@ -56,7 +53,7 @@ const ShoppingCartProducts = () => {
         <section className="shoppingcart-amount">
             <p>Subtotal amount: ${subTotalSum.toFixed(2)}</p>
             <p>Shipping: $25.99</p>
-            <h4>Total amount: ${parseFloat(subTotalSum.toFixed(2)) + 25.99}</h4>
+            <h4>Total amount: ${(parseFloat(subTotalSum.toFixed(2)) + 25.99).toFixed(2)}</h4>
             <button className="shoppingcart-purchase">Purchase</button>
 
         </section>

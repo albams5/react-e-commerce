@@ -1,7 +1,7 @@
 [
     {
       "name": "John Doe",
-      "Email ": "john.doe@example.com",
+      "Email": "john.doe@example.com",
       "Password": "password123",
       "Cart": [],
       "Wishlist": [],
@@ -9,7 +9,7 @@
     },
     {
       "name": "Jane Smith",
-      "Email ": "jane.smith@example.com",
+      "Email": "jane.smith@example.com",
       "Password": "pass1234",
       "Cart": [],
       "Wishlist": [],
@@ -17,7 +17,7 @@
     },
     {
       "name": "Mike Johnson",
-      "Email ": "mike.johnson@example.com",
+      "Email": "mike.johnson@example.com",
       "Password": "mikepass",
       "Cart": [],
       "Wishlist": [],
@@ -25,7 +25,7 @@
     },
     {
       "name": "Sarah Williams",
-      "Email ": "sarah.williams@example.com",
+      "Email": "sarah.williams@example.com",
       "Password": "password456",
       "Cart": [],
       "Wishlist": [],
@@ -33,7 +33,7 @@
     },
     {
       "name": "Chris Davis",
-      "Email ": "chris.davis@example.com",
+      "Email": "chris.davis@example.com",
       "Password": "pass789",
       "Cart": [],
       "Wishlist": [],

@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import { UserContext } from '../../context/UserContext';
 import bin from '../../assets/icons/bin.png'
 import './wishlistProductCard.css'
-import { Product } from '../../pages/ProductPage';
 import wishlistBackground from '../../assets/images/wishlist-background.png'
+import { Product } from '../../interfaces y types/interfaces';
 
 type Props = {}
 
@@ -18,7 +18,7 @@ const WishlistProductCard = (props: Props) => {
   return (
     <>
         <section className="wishlist-container-products">
-        {productsFiltered.length > 0 ? (
+        {productsFiltered && productsFiltered.length > 0 ? (
             productsFiltered?.map(element =>{
                 return (
                 <div className="wishlist-productcard" key={element.Id}>

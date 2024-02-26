@@ -5,20 +5,10 @@ import star from '../../assets/icons/star.png'
 import cart from '../../assets/icons/shoppingCart.png'
 import back from '../../assets/icons/back.png'
 import toast, {Toaster} from 'react-hot-toast'
-import { User, UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 import bag from '../../assets/icons/bag.png'
+import { Product, User } from "../../interfaces y types/interfaces";
 
-export interface Product {
-    name: string,
-    Collection: string,
-    Rating: number,
-    Price: number,
-    Id: string,
-    Image: string,
-    Colors: string[],
-    Category: string,
-    Quantity: number
-}
 
 export const ProductPage = () => {
     const params = useParams();

@@ -3,9 +3,9 @@ import like from "../../assets/icons/like.png"
 import add from "../../assets/icons/add.png"
 import "./productCard.css"
 import { Link } from 'react-router-dom'
-import { User, UserContext } from '../../context/UserContext'
-import { Product } from '../../pages/ProductPage'
+import { UserContext } from '../../context/UserContext'
 import toast, { Toaster } from 'react-hot-toast'
+import { Product, User } from '../../interfaces y types/interfaces'
 
 type Props = {
   category: string

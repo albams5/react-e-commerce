@@ -1,19 +1,6 @@
 import { FC, PropsWithChildren, createContext, useState } from "react"
-import { Product } from "../pages/ProductPage";
+import { UserContextType } from "../interfaces y types/interfaces";
 
-export interface User {
-    name: string,
-    Email: string,
-    Password: string,
-    Cart: Product[],
-    Wishlist: Product[],
-    Id: number
-}
-
-interface UserContextType {
-    userData: User | null,
-    setUserData: Function
-}
 
 export const UserContext = createContext({} as UserContextType);
 

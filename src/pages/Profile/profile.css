@@ -1,0 +1,14 @@
+.profile-main-container{
+    width: 430px;
+    height: 800px;
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+}
+
+.profile-container-info{
+    margin-top: 45px;
+}
+
+.profile-user-title{
+    margin: 10px;
+}
