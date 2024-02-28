@@ -2,32 +2,27 @@ import React, { useContext, useState } from "react";
 import bin from "../../assets/icons/bin.png";
 import minus from "../../assets/icons/minus.png";
 import plus from "../../assets/icons/add.png";
-import { Product } from "../../interfaces y types/interfaces";
+import { Product } from "../../interfaces/interfaces";
 import { UserContext } from "../../context/UserContext";
 
 type Props = {
-    element: Product,
-    setProductsToShow: Function,
-    subTotalSum: Function
+  element: Product;
+  setProductsToShow: Function;
+  subTotalSum: Function;
 };
 
-
-const CartElement = ({
-    element,
-    setProductsToShow,
-    subTotalSum
-}: Props) => {
+const CartElement = ({ element, setProductsToShow, subTotalSum }: Props) => {
   const user = useContext(UserContext);
   const userLogged = user.userData;
   const userCart = userLogged?.Cart;
-  
+
   const quantity = userCart?.filter((item) => element.Id === item.Id).length!;
   const [quantityProduct, setQuantityProduct] = useState(quantity);
-  
+
   const pricePerQuantity = (element.Price * quantityProduct).toFixed(2);
-    
+
   const removeItem = () => {
-    for(let i = 0; i < quantity; i++){
+    for (let i = 0; i < quantity; i++) {
       minusItem();
     }
     setQuantityProduct(0);
@@ -39,13 +34,12 @@ const CartElement = ({
 
   const minusItem = () => {
     setQuantityProduct(quantityProduct && quantityProduct - 1);
-    const index = userCart?.findIndex(item => item.Id === element.Id);
-    if (index!== undefined && userCart) {
+    const index = userCart?.findIndex((item) => item.Id === element.Id);
+    if (index !== undefined && userCart) {
       userCart.splice(index, 1);
     }
     subTotalSum();
-  }
-
+  };
 
   return (
     <div className="shoppingcart-productcard" key={element.Id}>
@@ -59,8 +53,9 @@ const CartElement = ({
           <button className="shoppingcart-btn">
             <img
               className="shoppingcart-quantity-btn"
-              onClick={() =>
-                {minusItem()}}
+              onClick={() => {
+                minusItem();
+              }}
               src={minus}
             />
           </button>
@@ -68,12 +63,11 @@ const CartElement = ({
           <button className="shoppingcart-btn">
             <img
               className="shoppingcart-quantity-btn"
-              onClick={() =>
-                {setQuantityProduct(quantityProduct && quantityProduct + 1);
+              onClick={() => {
+                setQuantityProduct(quantityProduct && quantityProduct + 1);
                 userCart?.push(element);
-              subTotalSum();
-            }
-              }
+                subTotalSum();
+              }}
               src={plus}
             />
           </button>

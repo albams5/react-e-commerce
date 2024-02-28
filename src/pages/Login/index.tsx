@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { loginChair } from "../../assets/images";
 import { useAuthDispatch } from "../../context/AuthContext";
 import { UserContext } from "../../context/UserContext";
-import { Errors, User, UserInput } from "../../interfaces y types/interfaces";
+import { Errors, User, UserInput } from "../../interfaces/interfaces";
 
 const Login = () => {
   const [user, setUser] = useState({ userName: "", password: "" });
   const [userData, setUserData] = useState([] as User[]);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({} as Errors);
   const userInfo = useContext(UserContext);
   const navigate = useNavigate();
 

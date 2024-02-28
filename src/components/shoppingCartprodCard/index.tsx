@@ -24,7 +24,6 @@ const ShoppingCartProducts = () => {
     (item, index, array) => array.findIndex((p) => p.Id === item.Id) === index
   );
   const [productsToShow, setProductsToShow] = useState(productsFiltered);
-  console.log({ productsToShow });
 
   useEffect(() => {
     subTotalSum();
@@ -35,7 +34,6 @@ const ShoppingCartProducts = () => {
       <section className="shoppingcart-container-products">
         {productsToShow && productsToShow.length > 0 ? (
           productsToShow?.map((element) => {
-            console.log("element", element)
             return (
               <CartElement key={element.Id}
                 subTotalSum={subTotalSum}
