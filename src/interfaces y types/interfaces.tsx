@@ -19,6 +19,16 @@ export interface User {
     Id: number
 }
 
+export type Errors = {
+    name: string,
+    password: string
+  }
+  
+export type UserInput = {
+    userName: string,
+    password: string
+  }
+
 export interface UserContextType {
     userData: User | null,
     setUserData: Function

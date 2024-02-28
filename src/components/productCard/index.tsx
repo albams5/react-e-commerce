@@ -35,6 +35,7 @@ const ProductCard = (props: Props) => {
   toast.success('Successfully added to your bag!')
   if(product && userLogged){
     userLogged.Cart.push(product);
+    product.Quantity += 1;
   }
  }
 

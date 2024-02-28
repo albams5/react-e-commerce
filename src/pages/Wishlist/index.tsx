@@ -3,9 +3,7 @@ import './wishlist.css'
 import { Navigation } from '../../components/layout/Navbar'
 import WishlistProductCard from '../../components/wishlistProdCard/WishlistProductCard'
 
-type Props = {}
-
-const Wishlist = (props: Props) => {
+const Wishlist = () => {
 
 
   return (

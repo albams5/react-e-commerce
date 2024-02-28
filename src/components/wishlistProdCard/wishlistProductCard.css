@@ -30,3 +30,8 @@
     display: flex;
     justify-content: center;
 }
+
+.wishlist-btn{
+    border: none;
+    background-color: white;
+}

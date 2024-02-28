@@ -4,17 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { loginChair } from '../../assets/images';
 import { useAuthDispatch } from '../../context/AuthContext';
 import { UserContext } from '../../context/UserContext';
+import { Errors, UserInput } from '../../interfaces y types/interfaces';
 
-
-type Errors = {
-  name: string,
-  password: string
-}
-
-type UserInput = {
-  userName: string,
-  password: string
-}
 
 
 const Login = () => {
@@ -94,7 +85,7 @@ const Login = () => {
   }, [user]);
 
 
-  const inputName = useRef(null);
+  const inputName: React.MutableRefObject<null> = useRef(null);
 
   useEffect(() => {
     inputName.current?.focus();

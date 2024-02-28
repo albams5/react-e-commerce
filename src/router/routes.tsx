@@ -9,14 +9,13 @@ import { AuthProvider } from "../context/AuthContext";
 import Wishlist from "../pages/Wishlist";
 import Profile from "../pages/Profile";
 
-type Props = {}
 
-export const AppRoutes = (props: Props) => {
+export const AppRoutes = () => {
 
   return (
     <AuthProvider>
       <BrowserRouter>
-        <UserContextProvider >
+        <UserContextProvider>
             <Routes>
               <Route index element={<Login />}/>
               <Route path="/homepage" element={<ProtectedRoute component={Home} />} />

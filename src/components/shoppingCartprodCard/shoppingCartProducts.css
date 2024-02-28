@@ -28,6 +28,12 @@
 
 .shoppingcart-bin{
     width: 1rem;
+    cursor: pointer;
+}
+
+.shoppingcart-btn{
+    border: none;
+    background-color: white;
 }
 
 .shoppingcart-container-products{
@@ -48,4 +54,9 @@
     margin-left: 2px;
     margin-right: 2px;
     cursor: pointer;
+}
+
+.shoppingcart-background-container{
+    display: flex;
+    justify-content: center;
 }

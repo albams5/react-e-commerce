@@ -7,7 +7,8 @@
       "Id": "1",
       "Image": "src/assets/images/sillon-mairo.jpg",
       "Colors": ["Brown", "Light Beige"],
-      "Category": ["Armchair", "All"]
+      "Category": ["Armchair", "All"],
+      "Quantity": 0
     },
     {
       "name": "Ana Armchair",
@@ -17,7 +18,8 @@
       "Id": "2",
       "Image": "src/assets/images/ana-armchair.jpg",
       "Colors": ["Dark Green", "Black"],
-      "Category": ["Armchair", "All"]
+      "Category": ["Armchair", "All"],
+      "Quantity": 0
     },
     {
       "name": "Robine Armchair",
@@ -27,7 +29,8 @@
       "Id": "3",
       "Image": "src/assets/images/fiji-armchair.jpg",
       "Colors": ["Grey"],
-      "Category": ["Armchair", "All"]
+      "Category": ["Armchair", "All"],
+      "Quantity": 0
 
     },
     {
@@ -38,7 +41,8 @@
       "Id": "4",
       "Image": "src/assets/images/silla-verde.jpg",
       "Colors": ["Dark Green", "Light Beige"],
-      "Category": ["Chair", "All"]
+      "Category": ["Chair", "All"],
+      "Quantity": 0
 
     },
     {
@@ -49,7 +53,8 @@
       "Id": "5",
       "Image": "src/assets/images/silla-patas-doradas.jpg",
       "Colors": ["Light Beige"],
-      "Category": ["Chair", "All"]
+      "Category": ["Chair", "All"],
+      "Quantity": 0
 
     },
     {
@@ -60,7 +65,8 @@
       "Id": "6",
       "Image": "src/assets/images/silla-madera.jpg",
       "Colors": ["Dark Green", "Light Beige", "Black", "Brown", "White"],
-      "Category": ["Chair", "All"]
+      "Category": ["Chair", "All"],
+      "Quantity": 0
 
     },
     {
@@ -71,7 +77,8 @@
       "Id": "7",
       "Image": "src/assets/images/sofa-alba.jpg",
       "Colors": ["Dark Green", "Light Beige"],
-      "Category": ["Sofa", "All"]
+      "Category": ["Sofa", "All"],
+      "Quantity": 0
 
     },
     {
@@ -82,7 +89,8 @@
       "Id": "8",
       "Image": "src/assets/images/sofa-elliot.jpg",
       "Colors": ["White", "Dark Green"],
-      "Category": ["Sofa", "All"]
+      "Category": ["Sofa", "All"],
+      "Quantity": 0
 
     },
     {
@@ -93,7 +101,8 @@
       "Id": "9",
       "Image": "src/assets/images/sofa-sofia.jpg",
       "Colors": ["White", "Light Beige"],
-      "Category": ["Sofa", "All"]
+      "Category": ["Sofa", "All"],
+      "Quantity": 0
 
     }
   ]

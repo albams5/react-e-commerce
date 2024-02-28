@@ -4,9 +4,8 @@ import Header from '../../components/layout/Header';
 import './profile.css'
 import { Navigation } from '../../components/layout/Navbar';
 
-type Props = {}
 
-const Profile = (props: Props) => {
+const Profile = () => {
   const user = useContext(UserContext)
   const userLogged = user.userData;
   return (
@@ -19,6 +18,14 @@ const Profile = (props: Props) => {
           <p>Name: {userLogged?.name}</p>
           <p>Email: {userLogged?.Email}</p>
           <p>Previous orders: none</p>
+        </div>
+        <div className="profile-container-settings">
+          <h4>Settings</h4>
+          <p>Cookie settings</p>
+          <p>About Creative Concept Design</p>
+          <p>Privacy Policy</p>
+          <p>Terms of Use</p>
+          <p>Terms and Conditions</p>
         </div>
       </div>
       <Navigation/>
