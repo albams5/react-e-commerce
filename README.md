@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# About the project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an e-commerce platform for a furniture store built using React. It provides customers with an intuitive and visually appealing interface to browse and purchase furniture items online. The application includes features such as product categorization, product details and shopping cart management.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Product Catalog: Browse  range of furniture products categorized by type.
 
-## Expanding the ESLint configuration
+Product Details: View detailed information about each furniture item, including image, rating, colors and pricing.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Shopping Cart: Add items to the shopping cart, update quantities, and remove items as needed.
 
-- Configure the top-level `parserOptions` property like this:
+Wishlist: Add items and remove them as needed.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+User Authentication: Register an account or log in to track orders and manage personal information.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies used
+React: Front-end JavaScript library for building user interfaces.
+
+React Router: Library for handling navigation and routing in React applications.
+
+react-hot-toast: A lightweight and customizable toast notification library for React applications. 
+
+## Daily records
+    -Day 1:
+        Figma design and click-up
+
+<img src="./public/figma-design.png"/>
+
+##Struggles
+

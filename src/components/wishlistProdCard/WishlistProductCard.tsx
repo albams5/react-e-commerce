@@ -21,7 +21,7 @@ const WishlistProductCard = (props: Props) => {
         {productsToShow && productsToShow.length > 0 ? (
             productsToShow?.map(element =>{
                 return (
-                    <WishlistElement setProductsToShow={setProductsToShow} productsFiltered={productsFiltered} element={element}/>
+                    <WishlistElement key={element.Id} userWishlist={userWishlist} setProductsToShow={setProductsToShow} productsFiltered={productsToShow} element={element}/>
                 );
     })
          ) : (
