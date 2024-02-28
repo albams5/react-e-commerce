@@ -13,7 +13,7 @@ type Props = {
 
 const ProductCard = (props: Props) => {
 
-  const [productData, setProductData] = useState([]);
+  const [productData, setProductData] = useState([] as Product[]);
   const filteredProducts = productData.filter(product => product.Category.includes(props.category));
 
 

@@ -1,37 +1,50 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import bin from "../../assets/icons/bin.png";
 import minus from "../../assets/icons/minus.png";
 import plus from "../../assets/icons/add.png";
 import { Product } from "../../interfaces y types/interfaces";
+import { UserContext } from "../../context/UserContext";
 
 type Props = {
     element: Product,
-    productsFiltered: Product[] | undefined,
-    setProductsToShow: Function
+    setProductsToShow: Function,
+    subTotalSum: Function
 };
 
-let subTotalSum: object[] = [];
 
 const CartElement = ({
     element,
-    productsFiltered,
     setProductsToShow,
+    subTotalSum
 }: Props) => {
-    const quantity = element.Quantity;
+  const user = useContext(UserContext);
+  const userLogged = user.userData;
+  const userCart = userLogged?.Cart;
+  
+  const quantity = userCart?.filter((item) => element.Id === item.Id).length!;
+  const [quantityProduct, setQuantityProduct] = useState(quantity);
+  
+  const pricePerQuantity = (element.Price * quantityProduct).toFixed(2);
     
-    const [quantityProduct, setQuantityProduct] = useState(quantity);
-
-    const pricePerQuantity = (element.Price * quantityProduct).toFixed(2);
-    
-    console.log("subtotalsum dentro del cartelement", subTotalSum)
-
-  const removeItem = (id: string | undefined) => {
-    const idToRemove: string | undefined = id;
-    let cartModified = productsFiltered?.filter(
-      (element:Product) => element.Id !== idToRemove
+  const removeItem = () => {
+    for(let i = 0; i < quantity; i++){
+      minusItem();
+    }
+    setQuantityProduct(0);
+    let productsFiltered = userCart?.filter(
+      (item, index, array) => array.findIndex((p) => p.Id === item.Id) === index
     );
-    setProductsToShow(cartModified);
+    setProductsToShow(productsFiltered);
   };
+
+  const minusItem = () => {
+    setQuantityProduct(quantityProduct && quantityProduct - 1);
+    const index = userCart?.findIndex(item => item.Id === element.Id);
+    if (index!== undefined && userCart) {
+      userCart.splice(index, 1);
+    }
+    subTotalSum();
+  }
 
 
   return (
@@ -47,8 +60,7 @@ const CartElement = ({
             <img
               className="shoppingcart-quantity-btn"
               onClick={() =>
-                setQuantityProduct(quantityProduct && quantityProduct - 1)
-              }
+                {minusItem()}}
               src={minus}
             />
           </button>
@@ -57,7 +69,10 @@ const CartElement = ({
             <img
               className="shoppingcart-quantity-btn"
               onClick={() =>
-                setQuantityProduct(quantityProduct && quantityProduct + 1)
+                {setQuantityProduct(quantityProduct && quantityProduct + 1);
+                userCart?.push(element);
+              subTotalSum();
+            }
               }
               src={plus}
             />
@@ -68,7 +83,7 @@ const CartElement = ({
         <button className="shoppingcart-btn">
           <img
             className="shoppingcart-bin"
-            onClick={() => removeItem(element.Id)}
+            onClick={() => removeItem()}
             src={bin}
           />
         </button>

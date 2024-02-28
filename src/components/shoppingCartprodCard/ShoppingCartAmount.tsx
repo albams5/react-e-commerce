@@ -1,11 +1,11 @@
-import React from 'react'
 
-type Props = {}
 
-const ShoppingCartAmount = ({subTotalSum = 0, productsToShow}:any) => {
+const ShoppingCartAmount = ({price, productsToShow}:any) => {
+
+    
   return (
      <section className="shoppingcart-amount">
-        <p>Subtotal amount: ${subTotalSum.toFixed(2)}</p>
+        <p>Subtotal amount: ${price.toFixed(2)}</p>
         <p>
           Shipping:
           {productsToShow && productsToShow.length <= 0 ? "$0" : "$25.99"}
@@ -14,10 +14,10 @@ const ShoppingCartAmount = ({subTotalSum = 0, productsToShow}:any) => {
           Total amount: $
           {productsToShow && productsToShow.length <= 0
             ? "0"
-            : (parseFloat(subTotalSum.toFixed(2)) + 25.99).toFixed(2)}
+            : (parseFloat(price.toFixed(2)) + 25.99).toFixed(2)}
         </h4>
         <button className="shoppingcart-purchase">Purchase</button>
-      </section> 
+      </section>
   )
 }
 
