@@ -6,6 +6,7 @@ import chairBackground from "../../assets/images/product-at-home.jpg"
 import ProductCard from '../../components/productCard';
 import { useContext, useState } from 'react';
 import { UserContext } from '../../context/UserContext';
+import StyledBtn from '../../styledComponents/StyledBtn';
 
  export const Home = () => {
 
@@ -41,10 +42,10 @@ import { UserContext } from '../../context/UserContext';
                         </div>
                     </div>
                     <div>
-                    <button onClick={() =>chooseCategory("All")} className="btn-categories">All</button>
-                    <button onClick={() =>chooseCategory("Armchair")} className="btn-categories">Armchair</button>
-                    <button onClick={() =>chooseCategory("Chair")} className="btn-categories">Chair</button>
-                    <button onClick={() =>chooseCategory("Sofa")} className="btn-categories">Sofa</button>
+                        <StyledBtn onClick={() =>chooseCategory("All")}>All</StyledBtn>
+                        <StyledBtn onClick={() =>chooseCategory("Armchair")}>Armchair</StyledBtn>
+                        <StyledBtn onClick={() =>chooseCategory("Chair")}>Chair</StyledBtn>
+                        <StyledBtn onClick={() =>chooseCategory("Sofa")}>Sofa</StyledBtn>
 
                     </div>
                     <div className="products-container">

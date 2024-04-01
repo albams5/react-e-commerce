@@ -11,14 +11,15 @@ import Profile from "../pages/Profile";
 
 
 export const AppRoutes = () => {
-
+  const login = window.localStorage.getItem("isLogged")
+  
   return (
     <AuthProvider>
       <BrowserRouter>
         <UserContextProvider>
             <Routes>
               <Route index element={<Login />}/>
-              <Route path="/homepage" element={<ProtectedRoute component={Home} />} />
+              <Route path="/homepage" element={<ProtectedRoute component={login ? Home : Login} />} />
               <Route path="/:productId" element={<ProtectedRoute component={ProductPage} />} />
               <Route path="/wishlist" element={<ProtectedRoute component={Wishlist}/>} />
               <Route path="/profile" element={<ProtectedRoute component={Profile}/>} />

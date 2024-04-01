@@ -3,11 +3,20 @@ import { UserContext } from '../../context/UserContext';
 import Header from '../../components/layout/Header';
 import './profile.css'
 import { Navigation } from '../../components/layout/Navbar';
+import { useNavigate } from 'react-router-dom';
+import StyledBtn from '../../styledComponents/StyledBtn';
 
 
 const Profile = () => {
   const user = useContext(UserContext)
   const userLogged = user.userData;
+
+  const navigate = useNavigate()
+  const logout = () => {
+    window.localStorage.removeItem('isLogged')
+    navigate('/')
+  }
+
   return (
     <>
       <div className="profile-main-container">
@@ -27,6 +36,7 @@ const Profile = () => {
           <p>Terms of Use</p>
           <p>Terms and Conditions</p>
         </div>
+        <StyledBtn onClick={()=>{logout()}} >Logout</StyledBtn>
       </div>
       <Navigation/>
     </>

@@ -62,6 +62,7 @@ const Login = () => {
     }
 
     if (correctUserAndPassword) {
+      window.localStorage.setItem('isLogged', JSON.stringify(true))
       errors.name = "";
       errors.password = "";
       handleLogin();
