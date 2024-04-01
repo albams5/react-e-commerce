@@ -1,26 +1,29 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, NavLink } from 'react-router-dom';
 import homeIcon from '../../../assets/icons/homeIcon.svg'
+import homeIconActive from '../../../assets/icons/homeIconActive.svg'
 import user from '../../../assets/icons/user.png'
 import wishlist from '../../../assets/icons/wishlist.png'
+import wishlistActive from '../../../assets/icons/wishlistActive.png'
 import shoppingCart from '../../../assets/icons/shoppingCart.png'
 import "./navbar.css"
 
 export function Navigation() {
+
     return (
     <section>
       <nav>
       <ul className = "navbar-style">
         <li>
-          <Link to="/homepage"><img src={homeIcon} alt="Home" /></Link>
+          <NavLink to="/homepage">{(isActive) => isActive ? <img src={homeIconActive} alt="Home" /> : <img src={homeIcon} alt="Home" />}</NavLink>
         </li>
         <li>
-          <Link to="/wishlist"><img src={wishlist} alt="Whislist" /></Link>
+          <NavLink to="/wishlist">{(isActive) => isActive ? <img src={wishlistActive} alt="Home" /> : <img src={wishlist} alt="Home" />}</NavLink>
         </li>
         <li>
-          <Link to="/shoppingcart"><img src={shoppingCart} alt="Shopping Cart" /></Link>
+          <NavLink to="/shoppingcart"><img src={shoppingCart} alt="Shopping Cart" /></NavLink>
         </li>
         <li>
-          <Link to="/profile"><img src={user} alt="Login" /></Link>
+          <NavLink to="/profile"><img src={user} alt="Login" /></NavLink>
         </li>
       </ul>
     </nav>
