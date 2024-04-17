@@ -6,9 +6,10 @@
       "Price": 75.99,
       "Id": "1",
       "Image": "src/assets/images/sillon-mairo.jpg",
-      "Colors": ["Brown", "Light Beige"],
+      "Colors": [{"name":"Brown", "ref": "#52170b"}, {"name":"Light Beige", "ref": "#f1c27d"}],
       "Category": ["Armchair", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
     },
     {
       "name": "Ana Armchair",
@@ -17,9 +18,10 @@
       "Price": 89.99,
       "Id": "2",
       "Image": "src/assets/images/ana-armchair.jpg",
-      "Colors": ["Dark Green", "Black"],
+      "Colors": [{"name":"Dark Green", "ref":"#004444"}, {"name": "Black", "ref": "#000000"}],
       "Category": ["Armchair", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
     },
     {
       "name": "Robine Armchair",
@@ -28,9 +30,10 @@
       "Price": 64.99,
       "Id": "3",
       "Image": "src/assets/images/fiji-armchair.jpg",
-      "Colors": ["Grey"],
+      "Colors": [{"name": "Grey", "ref": "#5d5d5d"}],
       "Category": ["Armchair", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
 
     },
     {
@@ -40,9 +43,10 @@
       "Price": 75.99,
       "Id": "4",
       "Image": "src/assets/images/silla-verde.jpg",
-      "Colors": ["Dark Green", "Light Beige"],
+      "Colors": [{"name":"Dark Green", "ref":"#004444"}, {"name":"Light Beige", "ref": "#f1c27d"}],
       "Category": ["Chair", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
 
     },
     {
@@ -52,9 +56,10 @@
       "Price": 54.99,
       "Id": "5",
       "Image": "src/assets/images/silla-patas-doradas.jpg",
-      "Colors": ["Light Beige"],
+      "Colors": [{"name":"Light Beige", "ref": "#f1c27d"}],
       "Category": ["Chair", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
 
     },
     {
@@ -64,9 +69,10 @@
       "Price": 119.99,
       "Id": "6",
       "Image": "src/assets/images/silla-madera.jpg",
-      "Colors": ["Dark Green", "Light Beige", "Black", "Brown", "White"],
+      "Colors": [{"name":"Dark Green", "ref":"#004444"}, {"name":"Light Beige", "ref": "#f1c27d"}, {"name": "Black", "ref": "#000000"}, {"name": "Brown", "ref": "#6b3e26"}, {"name": "White", "ref": "#ffffff"}],
       "Category": ["Chair", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
 
     },
     {
@@ -76,9 +82,10 @@
       "Price": 1200,
       "Id": "7",
       "Image": "src/assets/images/sofa-alba.jpg",
-      "Colors": ["Dark Green", "Light Beige"],
+      "Colors": [{"name":"Dark Green", "ref":"#004444"}, {"name":"Light Beige", "ref": "#f1c27d"}],
       "Category": ["Sofa", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
 
     },
     {
@@ -88,9 +95,10 @@
       "Price": 979.99,
       "Id": "8",
       "Image": "src/assets/images/sofa-elliot.jpg",
-      "Colors": ["White", "Dark Green"],
+      "Colors": [{"name": "White", "ref": "#ffffff"}, {"name":"Dark Green", "ref":"#004444"}],
       "Category": ["Sofa", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
 
     },
     {
@@ -100,9 +108,10 @@
       "Price": 819.99,
       "Id": "9",
       "Image": "src/assets/images/sofa-sofia.jpg",
-      "Colors": ["White", "Light Beige"],
+      "Colors": [{"name": "White", "ref": "#ffffff"}, {"name":"Light Beige", "ref": "#f1c27d"}],
       "Category": ["Sofa", "All"],
-      "Quantity": 0
+      "Quantity": 0,
+      "isWishlistItem": false
 
     }
   ]

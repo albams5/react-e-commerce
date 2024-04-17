@@ -1,11 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import like from "../../assets/icons/like.png";
+import likedProduct from "../../assets/icons/likedproduct.png";
 import add from "../../assets/icons/add.png";
 import "./productCard.css";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import toast, { Toaster } from "react-hot-toast";
 import { Product, User } from "../../interfaces/interfaces";
+import { DisplayProducts } from "../DisplayProducts";
 
 type Props = {
   category: string;
@@ -13,9 +15,17 @@ type Props = {
 
 const ProductCard = (props: Props) => {
   const [productData, setProductData] = useState([] as Product[]);
+  const user = useContext(UserContext);
+  const userLogged = user.userData;
   const filteredProducts = productData.filter((product) =>
     product.Category.includes(props.category)
   );
+//   filteredProducts.forEach(product => {
+//     const isWishlistItem = userLogged?.Wishlist.some(wishlistItem => wishlistItem.Id === product.Id);
+//     if (isWishlistItem) {
+//         product.isWishlistItem = true;
+//     }
+// });
 
   const fetchProducts = () => {
     fetch("src/data/products.json")
@@ -27,8 +37,7 @@ const ProductCard = (props: Props) => {
     fetchProducts();
   }, []);
 
-  const user = useContext(UserContext);
-  const userLogged = user.userData;
+  
 
   const addToBag = (product: Product, userLogged: User | null) => {
     toast.success("Successfully added to your bag!");
@@ -38,41 +47,13 @@ const ProductCard = (props: Props) => {
     }
   };
 
-  const addToWishlist = (product: Product, userLogged: User | null) => {
-    toast.success("Successfully added to your wishlist!");
-    if (product && userLogged) {
-      userLogged.Wishlist.push(product);
-    }
-  };
 
   return (
     <>
       <Toaster />
       {filteredProducts.map((product) => (
-        <div key={product.Id}>
-          <div className="container-product-img">
-            <Link to={`/${product.Id.toString()}`}>
-              <img className="product-img" src={product.Image} />
-            </Link>
-            <div className="container-like">
-              <img
-                className="product-like"
-                onClick={() => addToWishlist(product, userLogged)}
-                src={like}
-              />
-            </div>
-          </div>
-          <div className="addtocart-container">
-            <p className="product-name">{product.name}</p>
-            <img
-              className="addtocart-icon"
-              onClick={() => addToBag(product, userLogged)}
-              src={add}
-            />
-          </div>
-          <p className="product-price">{"$" + product.Price}</p>
-        </div>
-      ))}
+      <DisplayProducts key={product.Id} product={product} userLogged={userLogged} addToBag={addToBag} />
+        ))}
     </>
   );
 };

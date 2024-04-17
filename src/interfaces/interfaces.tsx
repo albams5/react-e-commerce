@@ -5,9 +5,15 @@ export interface Product {
     Price: number,
     Id: string,
     Image: string,
-    Colors: string[],
+    Colors: Colors[],
     Category: string,
-    Quantity: number
+    Quantity: number,
+    isWishlistItem: boolean
+}
+
+export interface Colors {
+  name: string,
+  ref: string
 }
 
 export interface User {

@@ -74,9 +74,12 @@ export const ProductPage = () => {
         {choosenProduct && (
           <div className="color-info">
             <h4>Colors:</h4>
-            <span>
+            <span className="productpage-colors">
               {choosenProduct.Colors.map((color, index) => (
-                <span key={index}>{color} </span>
+                <span key={index} className="color-item">
+                  <span className="circle-color" style={{ backgroundColor: color.ref || 'transparent' }}></span>
+                  {color.name}
+                </span>
               ))}
             </span>
           </div>
