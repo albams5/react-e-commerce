@@ -7,7 +7,7 @@ import back from "../../assets/icons/back.png";
 import toast, { Toaster } from "react-hot-toast";
 import { UserContext } from "../../context/UserContext";
 import bag from "../../assets/icons/bag.png";
-import { Product, User } from "../../interfaces/interfaces";
+import { Product, User, UserContextType } from "../../interfaces/interfaces";
 
 export const ProductPage = () => {
   const params = useParams();
@@ -32,7 +32,7 @@ export const ProductPage = () => {
     (product: { Id: string | undefined }) => product.Id === params.productId
   );
 
-  const user = useContext(UserContext);
+  const user:UserContextType = useContext(UserContext);
   const userLogged = user.userData;
 
   const addToBag = (choosenProduct: Product, userLogged: User) => {

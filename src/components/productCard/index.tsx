@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import "./productCard.css";
 import { UserContext } from "../../context/UserContext";
 import toast, { Toaster } from "react-hot-toast";
-import { Product, User } from "../../interfaces/interfaces";
+import { Product, User, UserContextType } from "../../interfaces/interfaces";
 import { DisplayProducts } from "../DisplayProducts";
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
 
 const ProductCard = (props: Props) => {
   const [productData, setProductData] = useState([] as Product[]);
-  const user = useContext(UserContext);
+  const user:UserContextType = useContext(UserContext);
   const userLogged = user.userData;
   const filteredProducts = productData.filter((product) =>
     product.Category.includes(props.category)

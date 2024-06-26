@@ -5,10 +5,11 @@ import './profile.css'
 import { Navigation } from '../../components/layout/Navbar';
 import { useNavigate } from 'react-router-dom';
 import StyledBtn from '../../styledComponents/StyledBtn';
+import { UserContextType } from '../../interfaces/interfaces';
 
 
 const Profile = () => {
-  const user = useContext(UserContext)
+  const user:UserContextType = useContext(UserContext)
   const userLogged = user.userData;
 
   const navigate = useNavigate()

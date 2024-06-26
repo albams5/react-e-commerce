@@ -7,10 +7,11 @@ import ProductCard from '../../components/productCard';
 import { useContext, useState } from 'react';
 import { UserContext } from '../../context/UserContext';
 import StyledBtn from '../../styledComponents/StyledBtn';
+import { UserContextType } from '../../interfaces/interfaces';
 
  export const Home = () => {
 
-    const user = useContext(UserContext);
+    const user:UserContextType = useContext(UserContext);
     const [category, setCategory] = useState("All")
 
     const chooseCategory = (category:string) => {
