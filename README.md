@@ -8,22 +8,22 @@ This project is an e-commerce platform for a furniture store built using React. 
 
 ## 📲Features
 
-Product Catalog: Browse range of furniture products categorized by type.
+- 📖Product Catalog: Browse range of furniture products categorized by type.
 
-Product Details: View detailed information about each furniture item, including image, rating, colors and pricing.
+- 🪑Product Details: View detailed information about each furniture item, including image, rating, colors and pricing.
 
-Shopping Cart: Add items to the shopping cart, update quantities, and remove items as needed.
+- 🛒Shopping Cart: Add items to the shopping cart, update quantities, and remove items as needed.
 
-Wishlist: Add items and remove them as needed.
+- Wishlist: Add items and remove them as needed.
 
-User Authentication: Register an account or log in to track orders and manage personal information.
+- User Authentication: Register an account or log in to track orders and manage personal information.
 
 ## ⚙️Technologies used
-React: Front-end JavaScript library for building user interfaces.
+**React**: Front-end JavaScript library for building user interfaces.
 
-React Router: Library for handling navigation and routing in React applications.
+**React Router**: Library for handling navigation and routing in React applications.
 
-react-hot-toast: A lightweight and customizable toast notification library for React applications.
+**react-hot-toast**: A lightweight and customizable toast notification library for React applications.
 
 ## 📝Daily records
     -Day 1:
@@ -82,9 +82,9 @@ react-hot-toast: A lightweight and customizable toast notification library for R
 
 ## ⚠️Struggles
 
-Difficulty editing or deleting products from the shopping page.
+- Difficulty editing or deleting products from the shopping page.
 
-The difficulty in knowing how to pass information from one component to another.
+- The difficulty in knowing how to pass information from one component to another.
 
-Difficulty in componentizing certain parts of the project
+´- Difficulty in componentizing certain parts of the project
 
