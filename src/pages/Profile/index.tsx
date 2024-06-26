@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { UserContext } from '../../context/UserContext';
+import { UserContext } from '../../context/UserContext.tsx';
 import Header from '../../components/layout/Header';
 import './profile.css'
 import { Navigation } from '../../components/layout/Navbar';
