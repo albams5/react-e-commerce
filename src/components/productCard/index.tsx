@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import "./productCard.css";
-import { UserContext } from "../../context/usercontext";
+import { UserContext } from "../../context/UserContext";
 import toast, { Toaster } from "react-hot-toast";
 import { Product, User, UserContextType } from "../../interfaces/interfaces";
 import { DisplayProducts } from "../DisplayProducts";

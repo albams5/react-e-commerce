@@ -5,7 +5,7 @@ import dots from "../../assets/icons/dots.png";
 import chairBackground from "../../assets/images/product-at-home.jpg";
 import ProductCard from "../../components/productCard";
 import { useContext, useState } from "react";
-import { UserContext } from "../../context/usercontext";
+import { UserContext } from "../../context/UserContext";
 import StyledBtn from "../../styledComponents/StyledBtn";
 import { UserContextType } from "../../interfaces/interfaces";
 

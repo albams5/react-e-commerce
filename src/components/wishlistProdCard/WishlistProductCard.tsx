@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { UserContext } from "../../context/usercontext";
+import { UserContext } from "../../context/UserContext";
 import "./wishlistProductCard.css";
 import wishlistBackground from "../../assets/images/wishlist-background.png";
 import { Product, UserContextType } from "../../interfaces/interfaces";

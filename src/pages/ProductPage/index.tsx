@@ -5,7 +5,7 @@ import star from "../../assets/icons/star.png";
 import cart from "../../assets/icons/shoppingCart.png";
 import back from "../../assets/icons/back.png";
 import toast, { Toaster } from "react-hot-toast";
-import { UserContext } from "../../context/usercontext";
+import { UserContext } from "../../context/UserContext";
 import bag from "../../assets/icons/bag.png";
 import { Product, User, UserContextType } from "../../interfaces/interfaces";
 

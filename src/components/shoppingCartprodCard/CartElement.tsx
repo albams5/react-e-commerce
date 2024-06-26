@@ -3,7 +3,7 @@ import bin from "../../assets/icons/bin.png";
 import minus from "../../assets/icons/minus.png";
 import plus from "../../assets/icons/add.png";
 import { Product, UserContextType } from "../../interfaces/interfaces";
-import { UserContext } from "../../context/usercontext";
+import { UserContext } from "../../context/UserContext";
 
 type Props = {
   element: Product;
