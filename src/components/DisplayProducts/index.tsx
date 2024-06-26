@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {Product} from '../../interfaces/interfaces'
 import { User } from '../../interfaces/interfaces'
 import { Link } from 'react-router-dom'

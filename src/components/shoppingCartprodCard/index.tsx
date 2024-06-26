@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
-
 import "./shoppingCartProducts.css";
 import shoppingCartBackground from "../../assets/images/shoppingcart-background.png";
 import CartElement from "./CartElement";

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import bin from "../../assets/icons/bin.png";
 import minus from "../../assets/icons/minus.png";
 import plus from "../../assets/icons/add.png";

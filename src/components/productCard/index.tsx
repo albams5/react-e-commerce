@@ -1,9 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import like from "../../assets/icons/like.png";
-import likedProduct from "../../assets/icons/likedproduct.png";
-import add from "../../assets/icons/add.png";
 import "./productCard.css";
-import { Link } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import toast, { Toaster } from "react-hot-toast";
 import { Product, User } from "../../interfaces/interfaces";
@@ -20,12 +16,6 @@ const ProductCard = (props: Props) => {
   const filteredProducts = productData.filter((product) =>
     product.Category.includes(props.category)
   );
-//   filteredProducts.forEach(product => {
-//     const isWishlistItem = userLogged?.Wishlist.some(wishlistItem => wishlistItem.Id === product.Id);
-//     if (isWishlistItem) {
-//         product.isWishlistItem = true;
-//     }
-// });
 
   const fetchProducts = () => {
     fetch("src/data/products.json")

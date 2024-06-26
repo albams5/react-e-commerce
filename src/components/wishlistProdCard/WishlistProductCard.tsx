@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import "./wishlistProductCard.css";
 import wishlistBackground from "../../assets/images/wishlist-background.png";

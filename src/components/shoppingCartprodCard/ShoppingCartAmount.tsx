@@ -2,7 +2,6 @@
 
 const ShoppingCartAmount = ({price, productsToShow}:any) => {
 
-    
   return (
      <section className="shoppingcart-amount">
         <p>Subtotal amount: ${price.toFixed(2)}</p>
