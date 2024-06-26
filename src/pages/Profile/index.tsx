@@ -1,27 +1,26 @@
-import { useContext } from 'react'
-import { UserContext } from '../../context/UserContext.tsx';
-import Header from '../../components/layout/Header';
-import './profile.css'
-import { Navigation } from '../../components/layout/Navbar';
-import { useNavigate } from 'react-router-dom';
-import StyledBtn from '../../styledComponents/StyledBtn';
-import { UserContextType } from '../../interfaces/interfaces';
-
+import { useContext } from "react";
+import { UserContext } from "../../context/usercontext";
+import Header from "../../components/layout/Header";
+import "./profile.css";
+import { Navigation } from "../../components/layout/Navbar";
+import { useNavigate } from "react-router-dom";
+import StyledBtn from "../../styledComponents/StyledBtn";
+import { UserContextType } from "../../interfaces/interfaces";
 
 const Profile = () => {
-  const user:UserContextType = useContext(UserContext)
+  const user: UserContextType = useContext(UserContext);
   const userLogged = user.userData;
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const logout = () => {
-    window.localStorage.removeItem('isLogged')
-    navigate('/')
-  }
+    window.localStorage.removeItem("isLogged");
+    navigate("/");
+  };
 
   return (
     <>
       <div className="profile-main-container">
-        <Header page="Profile"/>
+        <Header page="Profile" />
         <div className="profile-container-info">
           <h3 className="profile-user-title">User Info</h3>
           <h4>Personal Infomation</h4>
@@ -37,11 +36,17 @@ const Profile = () => {
           <p>Terms of Use</p>
           <p>Terms and Conditions</p>
         </div>
-        <StyledBtn onClick={()=>{logout()}} >Logout</StyledBtn>
+        <StyledBtn
+          onClick={() => {
+            logout();
+          }}
+        >
+          Logout
+        </StyledBtn>
       </div>
-      <Navigation/>
+      <Navigation />
     </>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

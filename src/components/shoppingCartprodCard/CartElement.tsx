@@ -1,9 +1,9 @@
-import  { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import bin from "../../assets/icons/bin.png";
 import minus from "../../assets/icons/minus.png";
 import plus from "../../assets/icons/add.png";
 import { Product, UserContextType } from "../../interfaces/interfaces";
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context/usercontext";
 
 type Props = {
   element: Product;
@@ -12,11 +12,12 @@ type Props = {
 };
 
 const CartElement = ({ element, setProductsToShow, subTotalSum }: Props) => {
-  const user:UserContextType = useContext(UserContext);
+  const user: UserContextType = useContext(UserContext);
   const userLogged = user.userData;
   const userCart = userLogged?.Cart;
 
-  const quantity = userCart?.filter((item:Product) => element.Id === item.Id).length!;
+  const quantity = userCart?.filter((item: Product) => element.Id === item.Id)
+    .length!;
   const [quantityProduct, setQuantityProduct] = useState(quantity);
 
   const pricePerQuantity = (element.Price * quantityProduct).toFixed(2);
@@ -27,14 +28,17 @@ const CartElement = ({ element, setProductsToShow, subTotalSum }: Props) => {
     }
     setQuantityProduct(0);
     let productsFiltered = userCart?.filter(
-      (item: Product, index: number, array: Product[]) => array.findIndex((p: Product) => p.Id === item.Id) === index
+      (item: Product, index: number, array: Product[]) =>
+        array.findIndex((p: Product) => p.Id === item.Id) === index
     );
     setProductsToShow(productsFiltered);
   };
 
   const minusItem = () => {
     setQuantityProduct(quantityProduct && quantityProduct - 1);
-    const index:number|undefined = userCart?.findIndex((item:Product) => item.Id === element.Id);
+    const index: number | undefined = userCart?.findIndex(
+      (item: Product) => item.Id === element.Id
+    );
     if (index !== undefined && userCart) {
       userCart.splice(index, 1);
     }

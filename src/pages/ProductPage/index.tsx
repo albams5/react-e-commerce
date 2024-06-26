@@ -5,7 +5,7 @@ import star from "../../assets/icons/star.png";
 import cart from "../../assets/icons/shoppingCart.png";
 import back from "../../assets/icons/back.png";
 import toast, { Toaster } from "react-hot-toast";
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context/usercontext";
 import bag from "../../assets/icons/bag.png";
 import { Product, User, UserContextType } from "../../interfaces/interfaces";
 
@@ -32,7 +32,7 @@ export const ProductPage = () => {
     (product: { Id: string | undefined }) => product.Id === params.productId
   );
 
-  const user:UserContextType = useContext(UserContext);
+  const user: UserContextType = useContext(UserContext);
   const userLogged = user.userData;
 
   const addToBag = (choosenProduct: Product, userLogged: User) => {
@@ -77,7 +77,10 @@ export const ProductPage = () => {
             <span className="productpage-colors">
               {choosenProduct.Colors.map((color, index) => (
                 <span key={index} className="color-item">
-                  <span className="circle-color" style={{ backgroundColor: color.ref || 'transparent' }}></span>
+                  <span
+                    className="circle-color"
+                    style={{ backgroundColor: color.ref || "transparent" }}
+                  ></span>
                   {color.name}
                 </span>
               ))}

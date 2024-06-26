@@ -3,14 +3,19 @@ import "./login.css";
 import { useNavigate } from "react-router-dom";
 import { loginChair } from "../../assets/images";
 import { useAuthDispatch } from "../../context/AuthContext";
-import { UserContext } from "../../context/UserContext";
-import { Errors, User, UserContextType, UserInput } from "../../interfaces/interfaces";
+import { UserContext } from "../../context/usercontext";
+import {
+  Errors,
+  User,
+  UserContextType,
+  UserInput,
+} from "../../interfaces/interfaces";
 
 const Login = () => {
   const [user, setUser] = useState({ userName: "", password: "" });
   const [userData, setUserData] = useState([] as User[]);
   const [errors, setErrors] = useState({} as Errors);
-  const userInfo:UserContextType = useContext(UserContext);
+  const userInfo: UserContextType = useContext(UserContext);
   const navigate = useNavigate();
 
   const dispatch = useAuthDispatch();
@@ -62,7 +67,7 @@ const Login = () => {
     }
 
     if (correctUserAndPassword) {
-      window.localStorage.setItem('isLogged', JSON.stringify(true))
+      window.localStorage.setItem("isLogged", JSON.stringify(true));
       errors.name = "";
       errors.password = "";
       handleLogin();
@@ -85,7 +90,7 @@ const Login = () => {
       });
   }, [user]);
 
-  const inputName=useRef<HTMLInputElement>(null);
+  const inputName = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (inputName.current) {
