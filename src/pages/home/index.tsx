@@ -1,8 +1,8 @@
 import "./homepage.css";
 import { Navigation } from "../../components/layout/Navbar";
-import bell from "../../assets/icons/bell.png";
-import dots from "../../assets/icons/dots.png";
-import chairBackground from "../../assets/images/product-at-home.jpg";
+import bell from "../../../public/assets/icons/bell.png";
+import dots from "../../../public/assets/icons/dots.png";
+import chairBackground from "../../../public/assets/images/product-at-home.jpg";
 import ProductCard from "../../components/productCard";
 import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";

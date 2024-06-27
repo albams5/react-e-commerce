@@ -1,12 +1,12 @@
 import { Link, useParams } from "react-router-dom";
 import "./productPage.css";
 import { useContext, useEffect, useState } from "react";
-import star from "../../assets/icons/star.png";
-import cart from "../../assets/icons/shoppingCart.png";
-import back from "../../assets/icons/back.png";
+import star from "../../../public/assets/icons/star.png";
+import cart from "../../../public/assets/icons/shoppingCart.png";
+import back from "../../../public/assets/icons/back.png";
 import toast, { Toaster } from "react-hot-toast";
 import { UserContext } from "../../context/UserContext";
-import bag from "../../assets/icons/bag.png";
+import bag from "../../../public/assets/icons/bag.png";
 import { Product, User, UserContextType } from "../../interfaces/interfaces";
 
 export const ProductPage = () => {
@@ -14,7 +14,7 @@ export const ProductPage = () => {
   const [products, setProducts] = useState<Product[] | undefined>();
 
   const fetchProducts = async () => {
-    const response = await fetch("/src/data/products.json");
+    const response = await fetch("./data/products.json");
     const data = await response.json();
     return data;
   };

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import "./shoppingCartProducts.css";
-import shoppingCartBackground from "../../assets/images/shoppingcart-background.png";
+import shoppingCartBackground from "../../../public/assets/images/shoppingcart-background.png";
 import CartElement from "./CartElement";
 import ShoppingCartAmount from "./ShoppingCartAmount";
 import { Product, UserContextType } from "../../interfaces/interfaces";

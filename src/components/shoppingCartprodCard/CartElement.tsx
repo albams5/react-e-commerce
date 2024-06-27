@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import bin from "../../assets/icons/bin.png";
-import minus from "../../assets/icons/minus.png";
-import plus from "../../assets/icons/add.png";
+import bin from "../../../public/assets/icons/bin.png";
+import minus from "../../../public/assets/icons/minus.png";
+import plus from "../../../public/assets/icons/add.png";
 import { Product, UserContextType } from "../../interfaces/interfaces";
 import { UserContext } from "../../context/UserContext";
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
-import { loginChair } from "../../assets/images";
+import loginChair from "../../../public/assets/images/green-chair-login.png";
 import { useAuthDispatch } from "../../context/AuthContext";
 import { UserContext } from "../../context/UserContext";
 import {
@@ -83,7 +83,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    fetch("src/data/users.json")
+    fetch("./data/users.json")
       .then((res) => res.json())
       .then((clients) => {
         setUserData(clients);

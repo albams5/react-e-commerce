@@ -18,7 +18,7 @@ const ProductCard = (props: Props) => {
   );
 
   const fetchProducts = () => {
-    fetch("src/data/products.json")
+    fetch("./data/products.json")
       .then((res) => res.json())
       .then((products) => setProductData(products));
   };

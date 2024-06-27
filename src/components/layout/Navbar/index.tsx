@@ -1,12 +1,12 @@
 import {Outlet, NavLink } from 'react-router-dom';
-import homeIcon from '../../../assets/icons/homeIcon.png'
-import homeIconActive from '../../../assets/icons/homeIconActive.png'
-import user from '../../../assets/icons/user.png'
-import userActive from '../../../assets/icons/userActive.png'
-import wishlist from '../../../assets/icons/wishlist.png'
-import wishlistActive from '../../../assets/icons/wishlistActive.png'
-import shoppingCart from '../../../assets/icons/shoppingCart.png'
-import shoppingCartActive from '../../../assets/icons/shoppingCartActive.png'
+import homeIcon from '../../../../public/assets/icons/homeIcon.png'
+import homeIconActive from '../../../../public/assets/icons/homeIconActive.png'
+import user from '../../../../public/assets/icons/user.png'
+import userActive from '../../../../public/assets/icons/userActive.png'
+import wishlist from '../../../../public/assets/icons/wishlist.png'
+import wishlistActive from '../../../../public/assets/icons/wishlistActive.png'
+import shoppingCart from '../../../../public/assets/icons/shoppingCart.png'
+import shoppingCartActive from '../../../../public/assets/icons/shoppingCartActive.png'
 import "./navbar.css"
 
 export function Navigation() {

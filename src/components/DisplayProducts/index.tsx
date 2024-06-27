@@ -2,9 +2,9 @@ import { useState } from 'react'
 import {Product} from '../../interfaces/interfaces'
 import { User } from '../../interfaces/interfaces'
 import { Link } from 'react-router-dom'
-import like from "../../assets/icons/like.png";
-import likedProduct from "../../assets/icons/likedproduct.png";
-import add from "../../assets/icons/add.png";
+import like from "../../../public/assets/icons/like.png";
+import likedProduct from "../../../public/assets/icons/likedproduct.png";
+import add from "../../../public/assets/icons/add.png";
 import toast from 'react-hot-toast';
 
 type Props = {
@@ -16,7 +16,6 @@ type Props = {
 export const DisplayProducts = ({product, userLogged, addToBag}:Props) => {
   const [liked, setLiked] = useState(false)
   
-  // product.isWishlistItem && setLiked(liked)
   const addToWishlist = (product: Product, userLogged: User | null) => {
     if(!liked){
       toast.success("Successfully added to your wishlist!");

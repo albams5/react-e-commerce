@@ -1,5 +1,5 @@
 import { Product } from "../../interfaces/interfaces";
-import bin from "../../assets/icons/bin.png";
+import bin from "../../../public/assets/icons/bin.png";
 
 type Props = {
   element: Product;
