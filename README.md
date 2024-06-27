@@ -88,3 +88,25 @@ This project is an e-commerce platform for a furniture store built using React. 
 
 ´- Difficulty in componentizing certain parts of the project
 
+## 🧑‍💻Installation
+
+To run this application locally, follow these steps:
+
+```bash
+1. Clone the repository:
+
+git clone  https://github.com/albams5/react-e-commerce.git
+
+2. Navigate to the project directory:
+
+cd react-e-commerce
+
+3. Run it: 
+
+npm run dev
+```
+
+## 💻Deployment
+
+This project is already deployed in Vercel: https://react-e-commerce-gules.vercel.app/
+
