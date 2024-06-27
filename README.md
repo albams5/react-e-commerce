@@ -86,7 +86,7 @@ This project is an e-commerce platform for a furniture store built using React. 
 
 - The difficulty in knowing how to pass information from one component to another.
 
-´- Difficulty in componentizing certain parts of the project
+- Difficulty in componentizing certain parts of the project
 
 ## 🧑‍💻Installation
 
